@@ -1,0 +1,1 @@
+Olá esse projeto será crucial para a elaboração do desafio proposto na fase 2 da residência de software.
