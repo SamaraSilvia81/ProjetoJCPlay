@@ -1,18 +1,83 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html>
 <head>
     <meta charset="UTF-8">
-    <title>PáginasWeb</title>
+    <link rel="stylesheet" href="style2.css">
+    <script src="script.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JC Play</title>
 </head>
 <body>
+    <header class="cabecalho">
+            <img id= "logo" src="logo.png" alt="JC Play"><a href="index.html"></a></img>
+            <input type="search" id="buscar" placeholder="    Pesquisar..."/>
+            <div id="live">
+            <span href=""><img src="https://api.iconify.design/fluent/video-recording-20-regular.svg?color=%23ec5151" class="icon" id="liveCam"/></span>
+            <span href="" id="liveTxt">Ao vivo</span>
+            </div>
+            <input type="checkbox" id="menuH" onclick="fade()">
+            <label for="menuH" for="fade"><img class="icon" src="https://api.iconify.design/carbon/menu.svg?color=white"></label>
+         <nav>
+            <ul id="menu">
+            <li><a href="#">Home</a></li><hr><br>
+            <li><a href="#">Ao vivo</a></li><hr><br> 
+            <li><a href="#">Cultura</a></li>
+            <li><a href="#">Esportes</a></li>
+            <li><a href="#">Política</a></li>
+            <li><a href="#">Saúde</a></li>
+            </ul>     
+            </ul>
+         </nav>
+    </header>
 
-    <h1>Registro de Páginas</h1>
-    <ul>
-      <li><a href="home.html">Home Page</a></li>
-      <li><a href="categorias.html">Categorias</a></li>
-      <li><a href="video.html">Video Escolhido</a></li>
-      <li><a href="aovivo.html">Ao Vivo</a></li>
-    </ul>
+
+
+
     
+<footer>
+    <div class="rodape"> <!--essa div é da parte cinza do footer-->
+        <img src="logo-rodape.png" id="logo_rodape" alt="logo jornal do commercio"/>
+        <img class="icon_footer" src="https://api.iconify.design/entypo-social/youtube-with-circle.svg?color=white" alt="logo do youtube"/>
+        <img class="icon_footer" src="https://api.iconify.design/entypo-social/facebook-with-circle.svg?color=white" alt="logo facebook">
+        <img class="icon_footer" src="https://api.iconify.design/ant-design/twitter-circle-filled.svg?color=white" alt="logo twitter">
+    <br><br><hr><br>
+        <div class="colunas_footer">
+            <div class="col-33">
+                <a href="" class="categoria_footer">Videos Recentes</a><br>
+                <a href="" class="categoria_footer">Saúde e Bem-estar</a><br>
+                <a href="" class="categoria_footer">Politica</a><br>
+                <a href="" class="categoria_footer">Esportes</a><br>
+            </div>
+            <div class="col-33">
+                <a href="" class="categoria_footer">Videos Recentes</a><br>
+                <a href="" class="categoria_footer">Saúde e Bem-estar</a><br>
+                <a href="" class="categoria_footer">Politica</a><br>
+                <a href="" class="categoria_footer">Esportes</a><br>
+            </div>
+            <div class="col-33">
+                <a href="" class="categoria_footer">Videos Recentes</a><br>
+                <a href="" class="categoria_footer">Saúde e Bem-estar</a><br>
+                <a href="" class="categoria_footer">Politica</a><br>
+                <a href="" class="categoria_footer">Esportes</a><br>
+            </div>
+        </div>
+    </div>
+    <br>
+    <p>© 2022 Jornal do Commércio Company</p>
+    <br>
+    <div id="jc_info">
+        <br>
+                <div class="col-33">
+                    <a href="#">Principais Editoriais</a><br>
+                </div>
+                <div class="col-33">
+                    <a href="#">Política de Privacidade</a><br>
+                </div>
+                <div class="col-33">
+                    <a href="#">Anuncie Conosco</a><br>
+                </div>
+        </div><br>
+</footer>
 </body>
 </html>
+
