@@ -3,82 +3,81 @@
     padding: 0;
     margin: 0;
     text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--cor2);
 }
 :root{
     --cor1: rgb(31,31,31);
-    --cor2: antiquewhite;
+    --cor2: white;
     --cor3: rgb(58, 57, 57);
     --cor4: rgb(82, 81, 80);
-    --cor5: rgb(198, 68, 68);  
+    --cor5: #ec5151; 
+    --cor6: #cecece; 
 }
+
 /*gerais*/
 
-body{
-    background-color: var(--cor2);
-    font-family: Arial, Helvetica, sans-serif;
-}
-
+#fade{
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-color: rgba(54, 38, 38, 0.6);
+  }
 .cabecalho{
     background-color: var(--cor1);
     position: fixed;
     width: 100%;
-    height: 50px;
+    height: 60px;
+    top: 0;
+    z-index: 99;
     text-align: right;
-    top:0;
-    z-index: 99;  
+    justify-content: right;
+    display: grid;
+    grid-template-columns: 1fr auto auto auto auto;
+    grid-template-rows: 50px;
+    column-gap: 10px;
 }
+
+/*barra superior*/
 
 #logo{
     margin-left: 10px;
-    height: 50px;
-    width: 150px;
-    float: left;
+    height: 60px;
+    width: 180px;
 }
 .icon{
-    height: 20px;
-    width: 20px;
+    height: 40px;
+    width: 40px;
     padding: 3px;
 }
-li a{
+nav ul li a{
     text-decoration: none;
     display: block;
     padding: 8px 3px;
     color: var(--cor2);
     text-align: justify;
+    font-size: larger;
 }
-li a:hover{
-    background-color: var(--cor2);
+nav ul li a:hover{
+    background-color: var(--cor6);
     color: var(--cor1);
+    font-weight: bolder;
+    margin-left: -3%;
+    transition: all 0.2s linear;
 }
-/*ao vivo*/
-#liveCam{
-    height: 30px;
-    width: 30px;
-    margin-top: 5px;
-    display: inline;
-    }
-a{
-    color: var(--cor5);
-    text-decoration: none;
-    font-weight: 700;
-}
-/*busca*/
-#buscar{    
-    background: url(Recursos/lupa.png) no-repeat right;
-    background-size: 20px;
-    display: inline;
-    padding: 5px;
+hr{
     border: 0;
-    width: 25px;
-    color: var(--cor2);
-    transition: all 0.1s linear;
+    height: 1.5px;    
+    background-image: linear-gradient(to right, transparent, rgb(197, 197, 197), transparent);  
 }
 
-#buscar:focus{
-    width: 200px;
-    border: 1px;
-}
 /*menu*/
+
 input[type="checkbox"]{
     display: none;
 }
@@ -87,7 +86,7 @@ input[type="checkbox"]:checked ~ nav{
     margin-left: 70%;
 }
 label{
-    display: inline;
+    display: inline-block;
     padding: 5px;
     margin-top: 0;
     z-index: 1;
@@ -95,27 +94,46 @@ label{
 nav{
     position: fixed;
     padding: 15px;
-    margin-top: 0px;
+    margin-top: 60px;
     height: 100%;
     width: 30%;
     display: none;
     justify-content: left;
     background-color: var(--cor4);
-    transition: all 0.1s linear;
-    font: 900;
 }
-#menu, #submenu{
+#menu{
     top: 15px;
     width: 100%;
     list-style: none;
 }
-#submenu{
-    margin-left: 12%;
+/*ao vivo*/
+#liveTxt{
+    font-size: larger;
+    display: inline-flexbox;
+    flex-flow: row;
+    color: var(--cor5);
+    font-weight: 700;
+
+}
+/*busca*/
+#buscar{    
+    background: url("https://api.iconify.design/bx/search-alt.svg?color=white") scroll no-repeat right;
+    background-size: 35px;
+    border: 0;
+    width: 35px;
+    color: var(--cor2);
+    transition: all 0.1s linear;
+    margin-top: 11px;
+    font-size: large;
+    height: 30px;
 }
 
-#videos_pauta{
-    margin-top: 70px;
+#buscar:focus{
+    width: 200px;
+    border: 1px;
 }
+
+/*main*/
 
 .pautas{
     margin-top: 70px;
@@ -129,10 +147,52 @@ nav{
     margin-top: 70px;
 }
 
-.linha{
+/*footer*/
+
+ footer{
+     font-size: small;
+     text-align: center;
+ }
+.rodape{
+    background-color: var(--cor4);
+    color: var(--cor1);
+    padding: 2%;
+}
+#logo_rodape{
+    height: 30px;
+    width: 90px;
+    margin-right: 50%;
+}
+.icon_footer{
+    height: 25px;
+    width: 25px;
+}
+.rodape a{
+    color: var(--cor2);
+}
+.colunas_footer{
     display: flex;
     flex-flow: row wrap;
     }
+#jc_info{
+    display: flex;
+    flex-flow: row wrap;
+}
+#jc_info a{
+    color: var(--cor1);
+}
 .col-33{
     width: 33%;
+}
+
+/*responsividade*/
+
+@media screen and (min-width: 1024px) {
+    input[type="checkbox"]:checked ~ nav{
+        margin-left: 85%;
+        font-size: larger;
+    }
+    #liveTxt{
+        font-size: x-large;
+    }
 }
