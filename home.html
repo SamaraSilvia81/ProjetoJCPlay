@@ -6,11 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
 
+    <!--Links Extras-->
+    
     <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
 
-     <!--Bootstrap CSS -->
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!--Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
      
+    <script src="index.js" defer></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  
 </head>
 <body class="body">
 
@@ -18,288 +26,385 @@
 
         <!-- Nav do Menu-->
         
-        <div>
-            <img id= "logo" src="Recursos/logo.png" alt="JC Play"><a href="index.html"></a></img>
-            <a href=""><img src="Recursos/aovivo.png" class="icon" id="liveCam"/>Ao vivo</a>
-            <input type="search" id="buscar" placeholder="   Pesquisar..."/>
-            <input type="checkbox" id="menuH">
-            <label for="menuH"><img class="icon" src="Recursos/menuH.png"></label>
-             <nav>
-                <ul id="menu">
+        <img id= "logo" src="Recursos/logo.png" alt="JC Play"><a href="index.html"></a></img>
+        <a href=""><img src="Recursos/aovivo.png" class="icon" id="liveCam"/>Ao vivo</a>
+        <input type="search" id="buscar" placeholder="   Pesquisar..."/>
+        <input type="checkbox" id="menuH">
+        <label for="menuH"><img class="icon" src="Recursos/menuH.png"></label>
+            <nav>
+              <ul id="menu">
                 <li><a href=""><img src="" class="icon"/>Home</a></li>
                 <li><a href=""><img src="" class="icon"/>Ao vivo</a></li>
                 <li><a href="#"><img src="" class="icon"/>Categorias</a></li>
                 <ul id="submenu">
-                 <li><a href="">Cultura</a></li>
-                 <li><a href="">Esportes</a></li>
-                 <li><a href="">Política</a></li>
+                    <li><a href="">Cultura</a></li>
+                    <li><a href="">Esportes</a></li>
+                    <li><a href="">Política</a></li>
                 </ul>
-             <br>       
-             </ul>
-             </nav>
-       </div>
+                <br>       
+              </ul>
+            </nav>
 
     </header>
 
     <main>
 
-        <div class="videos_pauta">
-            <div class="pautas">
-                
-                <div class="vpauta">
-                    <img src="#" alt="teste1" id="video-pauta1"> <!-- deixei o src para testes, mas acredito que na utilização da API indicariamos o id para substituição-->
-                </div>
-        
-                <div class="vpauta">
-                    <img src="#" alt="teste2" id="video-pauta2">
-                </div>
-        
-                <div class="vpauta">
-                    <img src="#" alt="teste3" id="video-pauta3">
-                </div>
+        <section id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
 
-                <input type="radio" name="radio-btn" id="pauta1">
-                <input type="radio" name="radio-btn" id="pauta2">
-                <input type="radio" name="radio-btn" id="pauta3">
+          <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>  
+          </div>
+
+          <div class="carousel-inner">
+
+            <h4 id="title-carousel">VÍDEOS EM ALTA</h4>
+            <div class="carousel-item active">
+              <div id="player"></div>
+              <div class="carousel-caption d-md-block">
+                <h4>Como melhorar sua MEMÓRIA com SHERLOCK | palácio mental</h4>
+                <p class = "descrition-title">1 ano,2021</p>
+                <p> Eu sou Lisa Guerra e nesse ídeo vou ensinar uma técnica de memorização chamada Palácio mental, 
+                  ou palácio da memoria. Ela é utilizada desde a antiguidade por antigos oradores e se desenvolveu ao 
+                  longo dos séculos. 
+                  <i class="bi bi-arrow-up-right-circle"></i>
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div id="player2"></div>
+              <div class="carousel-caption d-md-block">
+                <h4>10 Estratégias para ter mais froça mental</h4>
+                <p class = "descrition-title">1 mês, 2022</p>
+                <p>Você já pensou em ser uma pessoa mentalmente mais forte? Uma pessoa mais disciplinada, mais perseverante, 
+                  mais autoamorosa e capaz de cultivar relacionamentos mais saudáveis? Bom, se a resposta for sim, 
+                  nesse vídeo conheceremos 10 estratégias que vão te ajudar a trilhar esse caminho.
+                  <i class="bi bi-arrow-up-right-circle"></i>
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div id="player3"></div>
+              <div class="carousel-caption  d-md-block">
+                <h4>7 Orientações para buscar propósito na vida</h4>
+                <p class = "descrition-title">12 de Maio, 2022</p>
+                <p> Olá, pessoal. No podcast de hoje a gente vai falar um pouco sobre o sentido da vida, que é uma coisa muito particular, 
+                  ou seja, cada pessoa vai encontrar sentido para a própria vida em coisas diferentes, mas existe algo em comum entre a
+                  maioria das pessoas que afirmam ver sentido na própria existência: elas têm objetivos.
+                  <i class="bi bi-arrow-up-right-circle"></i>
+                </p>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </section>
+
+        <!--Carrousel 1 - Esportes-->
+
+        <section class="thumbSection">
+
+            <h2 class="thumbTitle">Esportes</h2>
+
+            <!-- Slider main container -->
+            <div class="thumbTiles swiper-container">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                <!-- Slides -->
+                    <div class="swiper-slide">
+                        <a class="tumbTitle" href="#">
+                            <img class="thumbTitle_image" src="./Recursos/photo1.jpg" alt="foto">
+                        </a>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <a class="tumbTitle" href="#">
+                            <img class="thumbTitle_image" src="./Recursos/photo2.jpg" alt="foto">
+                        </a>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <a class="tumbTitle" href="#">
+                            <img class="thumbTitle_image" src="/Recursos/photo3.jpg" alt="foto">
+                        </a>
+                    </div>
+
+                    <div class="swiper-slide">
+                      <a class="tumbTitle" href="#">
+                          <img class="thumbTitle_image" src="/Recursos/photo4.jpg" alt="foto">
+                      </a>
+                  </div>
+
+                    <div class="swiper-slide">
+                        <a class="tumbTitle" href="#">
+                            <img class="thumbTitle_image" src="./Recursos/photo5.jpg" alt="foto">
+                        </a>
+                    </div>
+
+                    <div class="swiper-slide">
+                      <a class="tumbTitle" href="#">
+                          <img class="thumbTitle_image" src="./Recursos/photo6.jpg" alt="foto">
+                      </a>
+                  </div>
+
+                  <div class="swiper-slide">
+                      <a class="tumbTitle" href="#">
+                          <img class="thumbTitle_image" src="./Recursos/photo7.jpg" alt="foto">
+                      </a>
+                  </div>
+
+                  <div class="swiper-slide">
+                      <a class="tumbTitle" href="#">
+                          <img class="thumbTitle_image" src="/Recursos/photo8.jpg" alt="foto">
+                      </a>
+                  </div>
+
+                  <div class="swiper-slide">
+                      <a class="tumbTitle" href="#">
+                          <img class="thumbTitle_image" src="./Recursos/photo9.jpg" alt="foto">
+                      </a>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <a class="tumbTitle" href="#">
+                        <img class="thumbTitle_image" src="./Recursos/photo10.jpg" alt="foto">
+                    </a>
+                </div>
+              </div>
+               
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
 
             </div>
-            <div class="navegacao">
-                <label for="pauta1"></label>
-                <label for="pauta2"></label>
-                <label for="pauta3"></label>
+        </section>
+
+        <!--Carrousel 2 - Política-->
+
+        <section class="thumbSection">
+
+          <h2 class="thumbTitle">Política</h2>
+
+          <!-- Slider main container -->
+          <div class="thumbTiles swiper-container">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper">
+              <!-- Slides -->
+                  <div class="swiper-slide">
+                      <a class="tumbTitle" href="#">
+                          <img class="thumbTitle_image" src="./Recursos/photo1.jpg" alt="foto">
+                      </a>
+                  </div>
+
+                  <div class="swiper-slide">
+                      <a class="tumbTitle" href="#">
+                          <img class="thumbTitle_image" src="./Recursos/photo2.jpg" alt="foto">
+                      </a>
+                  </div>
+
+                  <div class="swiper-slide">
+                      <a class="tumbTitle" href="#">
+                          <img class="thumbTitle_image" src="/Recursos/photo3.jpg" alt="foto">
+                      </a>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <a class="tumbTitle" href="#">
+                        <img class="thumbTitle_image" src="/Recursos/photo4.jpg" alt="foto">
+                    </a>
+                </div>
+
+                  <div class="swiper-slide">
+                      <a class="tumbTitle" href="#">
+                          <img class="thumbTitle_image" src="./Recursos/photo5.jpg" alt="foto">
+                      </a>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <a class="tumbTitle" href="#">
+                        <img class="thumbTitle_image" src="./Recursos/photo6.jpg" alt="foto">
+                    </a>
+                </div>
+
+                <div class="swiper-slide">
+                    <a class="tumbTitle" href="#">
+                        <img class="thumbTitle_image" src="./Recursos/photo7.jpg" alt="foto">
+                    </a>
+                </div>
+
+                <div class="swiper-slide">
+                    <a class="tumbTitle" href="#">
+                        <img class="thumbTitle_image" src="/Recursos/photo8.jpg" alt="foto">
+                    </a>
+                </div>
+
+                <div class="swiper-slide">
+                    <a class="tumbTitle" href="#">
+                        <img class="thumbTitle_image" src="./Recursos/photo9.jpg" alt="foto">
+                    </a>
+                </div>
+
+                <div class="swiper-slide">
+                  <a class="tumbTitle" href="#">
+                      <img class="thumbTitle_image" src="./Recursos/photo10.jpg" alt="foto">
+                  </a>
+              </div>
             </div>
-        </div>
+             
+              <!-- If we need navigation buttons -->
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+
+          </div>
+        </section>
+
+        <!--Carrousel 3 - Economia -->
+
+        <section class="thumbSection">
+
+          <h2 class="thumbTitle">Economia</h2>
+
+          <!-- Slider main container -->
+          <div class="thumbTiles swiper-container">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper">
+              <!-- Slides -->
+                  <div class="swiper-slide">
+                      <a class="tumbTitle" href="#">
+                          <img class="thumbTitle_image" src="./Recursos/photo1.jpg" alt="foto">
+                      </a>
+                  </div>
+
+                  <div class="swiper-slide">
+                      <a class="tumbTitle" href="#">
+                          <img class="thumbTitle_image" src="./Recursos/photo2.jpg" alt="foto">
+                      </a>
+                  </div>
+
+                  <div class="swiper-slide">
+                      <a class="tumbTitle" href="#">
+                          <img class="thumbTitle_image" src="/Recursos/photo3.jpg" alt="foto">
+                      </a>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <a class="tumbTitle" href="#">
+                        <img class="thumbTitle_image" src="/Recursos/photo4.jpg" alt="foto">
+                    </a>
+                </div>
+
+                  <div class="swiper-slide">
+                      <a class="tumbTitle" href="#">
+                          <img class="thumbTitle_image" src="./Recursos/photo5.jpg" alt="foto">
+                      </a>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <a class="tumbTitle" href="#">
+                        <img class="thumbTitle_image" src="./Recursos/photo6.jpg" alt="foto">
+                    </a>
+                </div>
+
+                <div class="swiper-slide">
+                    <a class="tumbTitle" href="#">
+                        <img class="thumbTitle_image" src="./Recursos/photo7.jpg" alt="foto">
+                    </a>
+                </div>
+
+                <div class="swiper-slide">
+                    <a class="tumbTitle" href="#">
+                        <img class="thumbTitle_image" src="/Recursos/photo8.jpg" alt="foto">
+                    </a>
+                </div>
+
+                <div class="swiper-slide">
+                    <a class="tumbTitle" href="#">
+                        <img class="thumbTitle_image" src="./Recursos/photo9.jpg" alt="foto">
+                    </a>
+                </div>
+
+                <div class="swiper-slide">
+                  <a class="tumbTitle" href="#">
+                      <img class="thumbTitle_image" src="./Recursos/photo10.jpg" alt="foto">
+                  </a>
+              </div>
+            </div>
+            
+              <!-- If we need navigation buttons -->
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+
+          </div>
+        </section>
         
-
-        <div class="videos_Recentes">
-            <h4>Videos Recentes</h4>
-            <ul class="videos_lista"> <!-- o ul é a lista e cada li representa um video-->
-                <li class="video">
-                    <img class="thumbnail" src=""/>
-                    <div class="video_info">
-                        <a href="" class="play_video">
-                        <span class="btn__play"></span> <!-- utilizei span pois vai ocupar o espaço apenas o conteudo, no caso do span que está dentro da ancora, ele seria um botão adicionado por bootstrap-->
-                        </a>
-                        <span class="titulo">Titulo</span>
-                    </div>
-                </li>
-                <li class="video">
-                    <img class="thumbnail" src=""/>
-                    <div class="video_info">
-                        <a href="" class="play_video">
-                        <span class="btn__play"></span>
-                        </a>
-                        <span class="titulo">Titulo</span>
-                    </div>
-                </li>
-                <li class="video">
-                    <img class="thumbnail" src=""/>
-                    <div class="video_info">
-                        <a href="" class="play_video">
-                        <span class="btn__play"></span>
-                        </a>
-                        <span class="titulo">Titulo</span>
-                    </div>
-                </li>
-                <li class="video">
-                    <img class="thumbnail" src=""/>
-                    <div class="video_info">
-                        <a href="" class="play_video">
-                        <span class="btn__play"></span>
-                        </a>
-                        <span class="titulo">Titulo</span>
-                    </div>
-                </li>
-            </ul>
-        </div>
-
-        <div class="videos_Saude">
-            <h4>Saúde e Bem-estar</h4>
-            <ul class="videos_lista">
-                <li class="video">
-                    <img class="thumbnail" src=""/>
-                    <div class="video_info">
-                        <a href="" class="play_video">
-                        <span class="btn__play"></span>
-                        </a>
-                        <span class="titulo">Titulo</span>
-                    </div>
-                </li>
-                <li class="video">
-                    <img class="thumbnail" src=""/>
-                    <div class="video_info">
-                        <a href="" class="play_video">
-                        <span class="btn__play"></span>
-                        </a>
-                        <span class="titulo">Titulo</span>
-                    </div>
-                </li>
-                <li class="video">
-                    <img class="thumbnail" src=""/>
-                    <div class="video_info">
-                        <a href="" class="play_video">
-                        <span class="btn__play"></span>
-                        </a>
-                        <span class="titulo">Titulo</span>
-                    </div>
-                </li>
-                <li class="video">
-                    <img class="thumbnail" src=""/>
-                    <div class="video_info">
-                        <a href="" class="play_video">
-                        <span class="btn__play"></span>
-                        </a>
-                        <span class="titulo">Titulo</span>
-                    </div>
-                </li>
-            </ul>
-
-        </div>
-            <div class="anuncio">
-                <strong> ANÚNCIOS </strong>
-            <!-- os anuncios são puxados pelo JS, então apenas reservei umaa div para inseri-los e ajustar os tamanhos com css-->
-            </div>
-        </div>
-
-        <div class="videos_esportes">
-            <h4>Esportes</h4>
-            <ul class="videos_lista">
-                <li class="video">
-                    <img class="thumbnail" src=""/>
-                    <div class="video_info">
-                        <a href="" class="play_video">
-                        <span class="btn__play"></span>
-                        </a>
-                        <span class="titulo">Titulo</span>
-                    </div>
-                </li>
-                <li class="video">
-                    <img class="thumbnail" src=""/>
-                    <div class="video_info">
-                        <a href="" class="play_video">
-                        <span class="btn__play"></span>
-                        </a>
-                        <span class="titulo">Titulo</span>
-                    </div>
-                </li>
-                <li class="video">
-                    <img class="thumbnail" src=""/>
-                    <div class="video_info">
-                        <a href="" class="play_video">
-                        <span class="btn__play"></span>
-                        </a>
-                        <span class="titulo">Titulo</span>
-                    </div>
-                </li>
-                <li class="video">
-                    <img class="thumbnail" src=""/>
-                    <div class="video_info">
-                        <a href="" class="play_video">
-                        <span class="btn__play"></span>
-                        </a>
-                        <span class="titulo">Titulo</span>
-                    </div>
-                </li>
-            </ul>
-
-        </div>
-        <div class="videos_Saude2">
-            <h4>Saúde e Bem-estar 2</h4>
-            <ul class="videos_lista">
-                <li class="video">
-                    <img class="thumbnail" src=""/>
-                    <div class="video_info">
-                        <a href="" class="play_video">
-                        <span class="btn__play"></span>
-                        </a>
-                        <span class="titulo">Titulo</span>
-                    </div>
-                </li>
-                <li class="video">
-                    <img class="thumbnail" src=""/>
-                    <div class="video_info">
-                        <a href="" class="play_video">
-                        <span class="btn__play"></span>
-                        </a>
-                        <span class="titulo">Titulo</span>
-                    </div>
-                </li>
-                <li class="video">
-                    <img class="thumbnail" src=""/>
-                    <div class="video_info">
-                        <a href="" class="play_video">
-                        <span class="btn__play"></span>
-                        </a>
-                        <span class="titulo">Titulo</span>
-                    </div>
-                </li>
-                <li class="video">
-                    <img class="thumbnail" src=""/>
-                    <div class="video_info">
-                        <a href="" class="play_video">
-                        <span class="btn__play"></span>
-                        </a>
-                        <span class="titulo">Titulo</span>
-                    </div>
-                </li>
-            </ul>
-        </div>
-
-        <div class="anuncio">
-            <strong> ANÚNCIOS </strong>
-        </div>
-
      </div>
-
     </main>
 
 
     <footer>
-        <div class="footer_categorias"> <!--essa div é da parte cinza do footer-->
-            <img src="" id="logo_rodape" alt="logo jornal do commercio"/>
-            <span class="icon_footer">youtube</span>
-            <span class="icon_footer">facebook</span>
-            <span class="icon_footer">twitter</span>
-        <hr id="linha">
-            <div class="linha">
-                <div id="coluna1_footer" class="col-33">
-                    <a href="" class="categoria_footer">Videos Recentes</a> <br>
-                    <a href="" class="categoria_footer">Saúde e Bem-estar</a><br>
-                    <a href="" class="categoria_footer">Politica</a><br>
-                    <a href="" class="categoria_footer">Esportes</a><br>
-                </div>
-                <div id="coluna2_footer" class="col-33">
-                    <a href="" class="categoria_footer">Videos Recentes</a><br>
-                    <a href="" class="categoria_footer">Saúde e Bem-estar</a><br>
-                    <a href="" class="categoria_footer">Politica</a><br>
-                    <a href="" class="categoria_footer">Esportes</a><br>
-                </div>
-                <div id="coluna3_footer" class="col-33">
-                    <a href="" class="categoria_footer">Videos Recentes</a><br>
-                    <a href="" class="categoria_footer">Saúde e Bem-estar</a><br>
-                    <a href="" class="categoria_footer">Politica</a><br>
-                    <a href="" class="categoria_footer">Esportes</a><br>
-                </div>
-            </div>
-        </div>
-        <div id="jc_info">
-                <div class="linha">
-                    <div class="col-33">
-                        <a>Principais Editoriais</a><br>
-                    </div>
-                    <div class="col-33">
-                        <a>Política de Privacidade</a><br>
-                    </div>
-                    <div class="col-33">
-                        <a>Anuncie Conosco</a><br>
-                    </div>
-                </div>
+      <div class="container5">
+        <div class="row">
+          <div class="col-lg-3 mb-3">
+            <h5 class="logo">JC PLAY</h5>
+            
+          </div>
 
-            <span id="jc_direitos">© 2022 Jornal do Commércio Company</span>
+          <div class="col-6 col-lg-2 mb-3">
+            <h5 class="title-footer">Company</h5>
+            <dl>
+                <dt><a href="" class="categoria_footer">Videos Recentes</a></dt>
+                <dt><a href="" class="categoria_footer">Saúde e Bem-estar</a></dt>
+                <dt><a href="" class="categoria_footer">Politica</a></dt>
+                <dt> <a href="" class="categoria_footer">Esportes</a></dt>
+          </dl>
+          </div>
 
-            </div>
+          <div class="col-6 col-lg-2 mb-3">
+            <h5 class="title-footer">Get Help</h5>
+            <dl>
+              <dt><a href="" class="categoria_footer">Videos Recentes</a></dt>
+              <dt><a href="" class="categoria_footer">Saúde e Bem-estar</a></dt>
+              <dt><a href="" class="categoria_footer">Politica</a></dt>
+              <dt> <a href="" class="categoria_footer">Esportes</a></dt>
+          </dl>
+          </div>
+
+          <div class="col-6 col-lg-2 mb-3">
+            <h5 class="title-footer">Online Chat</h5>
+            <dl>
+                <dt><a href="" class="categoria_footer">Videos Recentes</a></dt>
+                <dt><a href="" class="categoria_footer">Saúde e Bem-estar</a></dt>
+                <dt><a href="" class="categoria_footer">Politica</a></dt>
+                <dt> <a href="" class="categoria_footer">Esportes</a></dt>
+          </dl>
+          </div>
+
+          <div class="col-6 col-lg-2 mb-3">
+            <h5 class="title-footer">Online Chat</h5>
+            <dl>
+                <dt><a href="" class="categoria_footer">Videos Recentes</a></dt>
+                <dt><a href="" class="categoria_footer">Saúde e Bem-estar</a></dt>
+                <dt><a href="" class="categoria_footer">Politica</a></dt>
+                <dt> <a href="" class="categoria_footer">Esportes</a></dt>
+          </dl>
+          </div>
+          
+
         </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p> © 2022 Jornal do Commércio Company</p>
+      </div>
+
     </footer>
-
+          
 </body>
 </html>

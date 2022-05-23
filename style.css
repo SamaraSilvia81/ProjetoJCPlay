@@ -1,82 +1,77 @@
-/* variaveis*/
 *{
     padding: 0;
     margin: 0;
     text-decoration: none;
-}
-:root{
-    --cor1: rgb(31,31,31);
-    --cor2: antiquewhite;
-    --cor3: rgb(58, 57, 57);
-    --cor4: rgb(82, 81, 80);
-    --cor5: rgb(198, 68, 68);  
-}
-/*gerais*/
-
-body{
-    background-color: var(--cor2);
     font-family: Arial, Helvetica, sans-serif;
 }
+
+:root{
+    --cor1: rgb(31,31,31);
+    --cor2: white;
+    --cor3: rgb(58, 57, 57);
+    --cor4: rgb(82, 81, 80);
+    --cor5: #ec5151; 
+    --cor6: #cecece; 
+    --titleBorderRadius:4px;
+}
+
+/*gerais*/
+#fade{
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-color: rgba(54, 38, 38, 0.6);
+  }
 
 .cabecalho{
     background-color: var(--cor1);
     position: fixed;
     width: 100%;
-    height: 50px;
+    height: 60px;
+    top: 0;
+    z-index: 99;
     text-align: right;
-    top:0;
-    z-index: 99;  
+    justify-content: right;
+    display: grid;
+    grid-template-columns: 1fr auto auto auto auto;
+    grid-template-rows: 50px;
+    column-gap: 10px;
 }
-
+/*barra superior*/
 #logo{
     margin-left: 10px;
-    height: 50px;
-    width: 150px;
-    float: left;
+    height: 60px;
+    width: 180px;
 }
 .icon{
-    height: 20px;
-    width: 20px;
+    height: 40px;
+    width: 40px;
     padding: 3px;
 }
-li a{
+nav ul li a{
     text-decoration: none;
     display: block;
     padding: 8px 3px;
     color: var(--cor2);
     text-align: justify;
+    font-size: larger;
 }
-li a:hover{
-    background-color: var(--cor2);
+nav ul li a:hover{
+    background-color: var(--cor6);
     color: var(--cor1);
+    font-weight: bolder;
+    margin-left: -3%;
+    transition: all 0.2s linear;
 }
-/*ao vivo*/
-#liveCam{
-    height: 30px;
-    width: 30px;
-    margin-top: 5px;
-    display: inline;
-    }
-a{
-    color: var(--cor5);
-    text-decoration: none;
-    font-weight: 700;
-}
-/*busca*/
-#buscar{    
-    background: url(Recursos/lupa.png) no-repeat right;
-    background-size: 20px;
-    display: inline;
-    padding: 5px;
+hr{
     border: 0;
-    width: 25px;
-    color: var(--cor2);
-    transition: all 0.1s linear;
-}
-
-#buscar:focus{
-    width: 200px;
-    border: 1px;
+    height: 1.5px;    
+    background-image: linear-gradient(to right, transparent, rgb(197, 197, 197), transparent);  
 }
 /*menu*/
 input[type="checkbox"]{
@@ -87,7 +82,7 @@ input[type="checkbox"]:checked ~ nav{
     margin-left: 70%;
 }
 label{
-    display: inline;
+    display: inline-block;
     padding: 5px;
     margin-top: 0;
     z-index: 1;
@@ -95,44 +90,353 @@ label{
 nav{
     position: fixed;
     padding: 15px;
-    margin-top: 0px;
+    margin-top: 60px;
     height: 100%;
     width: 30%;
     display: none;
     justify-content: left;
     background-color: var(--cor4);
-    transition: all 0.1s linear;
-    font: 900;
 }
-#menu, #submenu{
+#menu{
     top: 15px;
     width: 100%;
     list-style: none;
 }
-#submenu{
-    margin-left: 12%;
+/*ao vivo*/
+#liveTxt{
+    font-size: larger;
+    display: inline-flexbox;
+    flex-flow: row;
+    color: var(--cor5);
+    font-weight: 700;
+
+}
+/*busca*/
+#buscar{    
+    background: url("https://api.iconify.design/bx/search-alt.svg?color=white") scroll no-repeat right;
+    background-size: 35px;
+    border: 0;
+    width: 35px;
+    color: var(--cor2);
+    transition: all 0.1s linear;
+    margin-top: 11px;
+    font-size: large;
+    height: 30px;
 }
 
-#videos_pauta{
-    margin-top: 70px;
+#buscar:focus{
+    width: 200px;
+    border: 1px;
+}
+ /*footer*/
+ footer{
+     font-size: small;
+     text-align: center;
+ }
+.rodape{
+    background-color: var(--cor4);
+    color: var(--cor1);
+    padding: 2%;
 }
 
-.pautas{
-    margin-top: 70px;
+#logo_rodape{
+    height: 30px;
+    width: 90px;
+    margin-right: 50%;
 }
-
-#videos_escolhido{
-    margin-top: 70px;
+.icon_footer{
+    height: 25px;
+    width: 25px;
 }
-
-.escolhido{
-    margin-top: 70px;
+.rodape a{
+    color: var(--cor2);
 }
-
-.linha{
+.colunas_footer{
     display: flex;
     flex-flow: row wrap;
     }
+#jc_info{
+    display: flex;
+    flex-flow: row wrap;
+}
+#jc_info a{
+    color: black;
+}
 .col-33{
     width: 33%;
+}
+/*responsividade*/
+
+@media screen and (min-width: 1024px) {
+    input[type="checkbox"]:checked ~ nav{
+        margin-left: 85%;
+        font-size: larger;
+    }
+    #liveTxt{
+        font-size: x-large;
+    }
+}
+
+/* FOOTER */
+
+.container5{
+    padding-top: 3%;;
+    background: rgb(51, 50, 50);;
+    color: #fff;
+    font-size: 12px;
+}
+
+.footer-bottom{
+    text-align: center;  /* Faz ficar no centro */
+    line-height: 50px; /* Faz ficar no centro */
+    background-color: #fff;
+    padding-left: 35rem;
+}
+
+.redes{   /* Para mudar os icons de um agrupamento vertical para horizontal  */
+    display: flex;
+    margin-left: 60px;
+}
+
+.bi{  /* Permite um espaçamento entre os ícones  */
+    padding: 5px;
+}
+
+.logo{
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 4px; /* Controla os espaços em branco do texto*/
+    padding-top: 40px;
+    text-decoration: none; 
+    color: #fff; 
+    margin-right: 200px;
+    margin-left: 100px;
+}
+
+.logo:hover{
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+dl{
+    text-align: center;
+}
+
+.title-footer{
+    line-height: 50px;
+    text-align: center;
+}
+
+h5{
+    /* margin-left: 35px;*/
+    text-align: center;
+}
+
+h4{
+    color: white;
+    text-align: left;
+}
+
+#title-carousel{
+    color: white;
+    padding-left: 20px;
+}
+
+.descrition-title{
+    line-height: 0.1rem;
+    font-size: 0.875rem;
+    text-align: left;
+}
+
+.carousel-control-prev{
+    height: 30rem;  
+}
+
+.carousel-control-next{
+   height: 30rem;   
+}
+
+.carousel-inner{
+    padding-top: 75px;
+    background-color: rgb(51, 50, 50);
+}
+
+.carousel-caption{
+    height: 220px;
+}
+
+p{
+    font-size: 1rem;
+    text-align: justify;
+    padding-right: 500px;
+}
+
+.bi{
+    visibility: hidden;
+}
+
+#player{
+  height: 320px;
+  width: 100%;
+}
+
+#player2{
+  height: 320px;
+  width: 100%;
+}
+
+#player3{
+  height: 320px;
+  width: 100%;
+}
+
+/*Carousel body */
+
+.thumbSection{
+    padding-top: 3%;
+    color: var(--colorwhite);
+}
+
+.thumbTitle{
+    font-size: 16px;
+    line-height: 14px;
+    font-weight: 500;
+    margin: 0 4% 12px;
+    width: 20%;
+    font-weight:bolder;
+    text-transform: uppercase;
+}
+
+.thumbTitle_image{
+    width: 100%;
+    border-radius: 4px;
+    margin:10px;
+    height:200px;
+}
+
+.thumbTitle_image:hover{
+    -webkit-transform: scale(1.09);
+}
+
+.thumbTiles.swiper-container{
+    padding: 0 4%;
+}
+
+.thumbTiles,.swiper-button-prev,.swiper-button-next{
+
+   padding-top: 18rem;
+   height: 100%;
+   width: 4%;
+   top: 0;
+   bottom: 0;
+   margin: 0;
+   font-size: 4vw;
+   font-weight: bold;
+   transition: transform 0.1s ease-out;
+}
+
+
+@media screen and(min-widht:640px){
+    .thumbTiles .swiper-button-prev::after,
+    .thumbTiles .swiper-button-next::after{
+        display: none;
+        font-size: 2.4vw;
+    }
+
+    .thumbTiles .swiper-button-prev:hover::after,
+    .thumbTiles .swiper-button-next:hover::after{
+        transform: scale(1.25);
+    }
+
+    .thumbTiles:hover .swiper-button-prev::after,
+    .thumbTiles:hover .swiper-button-next::after{
+        display: block;
+    }
+}
+
+
+@media (max-width: 999px){
+
+    .carousel-item{
+        height: 40rem;
+        background-color: rgb(51, 50, 50);
+        padding: 20px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .footer-bottom{
+        text-align: center;  /* Faz ficar no centro */
+        line-height: 50px; /* Faz ficar no centro */
+        background-color: #fff;
+        padding-left: 150px;
+    }
+
+    .bi{
+        color: white;
+        padding-left: 400px;
+        font-size: 26px;
+        visibility:visible;
+    }
+
+    .carousel-caption{
+        text-align: justify;
+        color: black;
+        height: 280px;
+    }
+
+    .carousel-control-prev{
+        margin-bottom: 200px;   
+    }
+
+    .carousel-control-next{
+        margin-bottom: 200px;   
+    }
+
+    .d-block{
+        height: 20rem;
+    }
+
+    h4{
+        font-family: nyt-cheltenham, georgia, "times new roman", times, serif;
+        color: rgb(255, 255, 255);
+        line-height: 2.125rem;
+        font-size: 1.875rem;
+        font-weight: 600;
+        font-style: normal;
+        margin-bottom: 0px;
+        text-align: left;
+    }
+
+    .descrition-title{
+        font-family: nyt-franklin, helvetica, arial, sans-serif;
+        font-weight: 300;
+        letter-spacing: 0.0125rem;
+        color: rgb(128, 123, 123);
+        margin-top: 0.9375rem;
+        font-size: 0.875rem;
+        line-height: 1.125rem;
+        text-align: justify;
+    
+    }
+
+    p{
+        font-size: 0.90625rem;
+        line-height: 1.2rem;
+        color: rgb(209, 202, 202);
+        text-align: justify;
+        padding-right: 0px;
+    }   
+
+    .swiper-button-prev, .swiper-button-next{
+        padding-top: 36rem;
+    }
+
+    .logo{
+        padding-left: 100px;
+    }
+
+    .footer-bottom{
+        padding-left: 200px;
+    }
 }
