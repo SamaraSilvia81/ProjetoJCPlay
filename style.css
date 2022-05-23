@@ -2,7 +2,6 @@
     padding: 0;
     margin: 0;
     text-decoration: none;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 :root{
@@ -15,7 +14,8 @@
     --titleBorderRadius:4px;
 }
 
-/*gerais*/
+/*MENU*/
+
 #fade{
     display: none;
     height: 100%;
@@ -42,7 +42,7 @@
     grid-template-rows: 50px;
     column-gap: 10px;
 }
-/*barra superior*/
+
 #logo{
     margin-left: 10px;
     height: 60px;
@@ -53,6 +53,7 @@
     width: 40px;
     padding: 3px;
 }
+
 nav ul li a{
     text-decoration: none;
     display: block;
@@ -61,6 +62,7 @@ nav ul li a{
     text-align: justify;
     font-size: larger;
 }
+
 nav ul li a:hover{
     background-color: var(--cor6);
     color: var(--cor1);
@@ -68,25 +70,31 @@ nav ul li a:hover{
     margin-left: -3%;
     transition: all 0.2s linear;
 }
+
 hr{
     border: 0;
     height: 1.5px;    
     background-image: linear-gradient(to right, transparent, rgb(197, 197, 197), transparent);  
 }
-/*menu*/
+
+/*Menu Interação*/
+
 input[type="checkbox"]{
     display: none;
 }
+
 input[type="checkbox"]:checked ~ nav{
     display: flex;
     margin-left: 70%;
 }
+
 label{
     display: inline-block;
     padding: 5px;
     margin-top: 0;
     z-index: 1;
 }
+
 nav{
     position: fixed;
     padding: 15px;
@@ -102,6 +110,7 @@ nav{
     width: 100%;
     list-style: none;
 }
+
 /*ao vivo*/
 #liveTxt{
     font-size: larger;
@@ -111,6 +120,7 @@ nav{
     font-weight: 700;
 
 }
+
 /*busca*/
 #buscar{    
     background: url("https://api.iconify.design/bx/search-alt.svg?color=white") scroll no-repeat right;
@@ -128,56 +138,80 @@ nav{
     width: 200px;
     border: 1px;
 }
- /*footer*/
- footer{
-     font-size: small;
-     text-align: center;
- }
-.rodape{
-    background-color: var(--cor4);
-    color: var(--cor1);
-    padding: 2%;
+
+/*Carousel body */
+
+.thumbSection{
+    padding-top: 3%;
 }
 
-#logo_rodape{
-    height: 30px;
-    width: 90px;
-    margin-right: 50%;
+.thumbTitle{
+    font-size: 16px;
+    line-height: 14px;
+    font-weight: 500;
+    margin: 0 4% 12px;
+    width: 20%;
+    font-weight:bolder;
+    text-transform: uppercase;
 }
-.icon_footer{
-    height: 25px;
-    width: 25px;
-}
-.rodape a{
-    color: var(--cor2);
-}
-.colunas_footer{
-    display: flex;
-    flex-flow: row wrap;
-    }
-#jc_info{
-    display: flex;
-    flex-flow: row wrap;
-}
-#jc_info a{
-    color: black;
-}
-.col-33{
-    width: 33%;
-}
-/*responsividade*/
 
-@media screen and (min-width: 1024px) {
-    input[type="checkbox"]:checked ~ nav{
-        margin-left: 85%;
-        font-size: larger;
-    }
-    #liveTxt{
-        font-size: x-large;
-    }
+.thumbTitle_image{
+    width: 100%;
+    border-radius: 4px;
+    margin-top:0;
+    margin:0 100px 0 5%;
+    height:200px;
+}
+
+.thumbTitle_image:hover{
+    -webkit-transform: scale(1.09);
+}
+
+.thumbTiles.swiper-container{
+    padding: 0 4%;
+}
+
+.thumbTiles,.swiper-button-prev,.swiper-button-next{
+
+   padding-top: 15rem; /*18 */
+   height: 100%;
+   width: 4%;
+   top: 0;
+   bottom: 0;
+   margin: 0;
+   font-size: 4vw;
+   font-weight: bold;
+   transition: transform 0.1s ease-out;
 }
 
 /* FOOTER */
+
+#jc_info{
+   display: flex;
+   flex-flow: row wrap;
+   text-align: center;  /* Faz ficar no centro */
+   line-height: 50px; /* Faz ficar no centro */
+   padding-left: 2%;
+}
+
+#jc_info a{
+   color: black;
+   text-decoration: none;
+}
+
+.col-33{
+   width: 33%;
+}
+
+.categoria_footer{
+   color: #fff;
+   text-decoration: none;
+}
+
+#icon1, #icon2, #icon3{
+   visibility: visible;
+   font-size: 16px;
+}
 
 .container5{
     padding-top: 3%;;
@@ -190,7 +224,7 @@ nav{
     text-align: center;  /* Faz ficar no centro */
     line-height: 50px; /* Faz ficar no centro */
     background-color: #fff;
-    padding-left: 35rem;
+    padding-left: 38rem;
 }
 
 .redes{   /* Para mudar os icons de um agrupamento vertical para horizontal  */
@@ -290,51 +324,18 @@ p{
   width: 100%;
 }
 
-/*Carousel body */
 
-.thumbSection{
-    padding-top: 3%;
-    color: var(--colorwhite);
+/*responsividade*/
+
+@media screen and (min-width: 1024px) {
+    input[type="checkbox"]:checked ~ nav{
+        margin-left: 85%;
+        font-size: larger;
+    }
+    #liveTxt{
+        font-size: x-large;
+    }
 }
-
-.thumbTitle{
-    font-size: 16px;
-    line-height: 14px;
-    font-weight: 500;
-    margin: 0 4% 12px;
-    width: 20%;
-    font-weight:bolder;
-    text-transform: uppercase;
-}
-
-.thumbTitle_image{
-    width: 100%;
-    border-radius: 4px;
-    margin:10px;
-    height:200px;
-}
-
-.thumbTitle_image:hover{
-    -webkit-transform: scale(1.09);
-}
-
-.thumbTiles.swiper-container{
-    padding: 0 4%;
-}
-
-.thumbTiles,.swiper-button-prev,.swiper-button-next{
-
-   padding-top: 18rem;
-   height: 100%;
-   width: 4%;
-   top: 0;
-   bottom: 0;
-   margin: 0;
-   font-size: 4vw;
-   font-weight: bold;
-   transition: transform 0.1s ease-out;
-}
-
 
 @media screen and(min-widht:640px){
     .thumbTiles .swiper-button-prev::after,

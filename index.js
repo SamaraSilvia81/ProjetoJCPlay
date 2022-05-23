@@ -102,8 +102,8 @@ const swiper = new Swiper('.swiper-container', {
 
     //when window widht is>=640
     640:{
-      slidesPerView:5,
-      slidesPerGroup:5,
+      slidesPerView:2,
+      slidesPerGroup:2,
       freeMode: false
     }
   }
