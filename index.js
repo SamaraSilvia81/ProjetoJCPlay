@@ -84,6 +84,7 @@ function onPlayerStateChange3(event) {
 }
 
 const swiper = new Swiper('.swiper-container', {
+
   // Optional parameters
   spaceBetween:5,
   slidesPerView:2,
@@ -91,7 +92,7 @@ const swiper = new Swiper('.swiper-container', {
   freeMode:true,
   loopAdditionalSlides:5,
   spped:500,
-
+  
   // Navigation arrows
   navigation: {
     nextEl: '.swiper-button-next',
@@ -99,12 +100,10 @@ const swiper = new Swiper('.swiper-container', {
   },
 
   breakpoints:{
-
-    //when window widht is>=640
-    640:{
-      slidesPerView:2,
-      slidesPerGroup:2,
-      freeMode: false
+    650:{
+      slidesPerView:5,
+      slidesPerGroup: 5,
+      freeMode:false
     }
   }
 }
