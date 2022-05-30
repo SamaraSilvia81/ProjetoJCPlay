@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
+    <title>Categorias</title>
+
+    <link href="style2.css" rel="stylesheet">
 
      <!--Bootstrap CSS -->
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -14,288 +14,70 @@
 </head>
 <body class="body">
 
-    <header class="cabecalho"> 
+        <h1>NETFLIX</h1>
 
-        <!-- Nav do Menu-->
-        
-        <img id= "logo" src="Recursos/logo.png" alt="JC Play"><a href="home.html"></a></img>
-            <input type="search" id="buscar" placeholder="    Pesquisar..."/>
-            <div id="live">
-            <span href=""><img src="https://api.iconify.design/fluent/video-recording-20-regular.svg?color=%23ec5151" class="icon" id="liveCam"/></span>
-            <span href="" id="liveTxt">Ao vivo</span>
+        <div class="wrapper">
+        <section id="section1">
+            <a href="#section3" class="arrow__btn">‹</a>
+            <div class="item">
+                <img src="https://occ-0-243-299.1.nflxso.net/dnm/api/v5/rendition/412e4119fb212e3ca9f1add558e2e7fed42f8fb4/AAAABZEK-7pZ1H5FD4cTyUb9qB_KeyJGz5p-kfPhCFv4GU_3mbdm8Xfsy4IBchlG9PFNdGff8cBNPaeMra72VFnot41nt0y3e8RLgaVwwh3UvyM2H2_MkmadWbQUeGuf811K7-cxJJh7gA.jpg">
             </div>
-            <input type="checkbox" id="menuH" onclick="fade()">
-            <label for="menuH"><img class="icon" src="https://api.iconify.design/carbon/menu.svg?color=white"></label>
-         <nav>
-            <ul id="menu">
-            <li><a href="#">Home</a></li><hr><br>
-            <li><a href="#">Ao vivo</a></li><hr><br> 
-            <li><a href="#">Cultura</a></li>
-            <li><a href="#">Esportes</a></li>
-            <li><a href="#">Política</a></li>
-            <li><a href="#">Saúde</a></li>
-            </ul>     
-            </ul>
-         </nav>
-    </header>
-
-    <main>
-
-        <div class="videos_pauta">
-            <div class="pautas">
-                
-                <div class="vpauta">
-                    <img src="#" alt="teste1" id="video-pauta1"> <!-- deixei o src para testes, mas acredito que na utilização da API indicariamos o id para substituição-->
-                </div>
-        
-                <div class="vpauta">
-                    <img src="#" alt="teste2" id="video-pauta2">
-                </div>
-        
-                <div class="vpauta">
-                    <img src="#" alt="teste3" id="video-pauta3">
-                </div>
-
-                <input type="radio" name="radio-btn" id="pauta1">
-                <input type="radio" name="radio-btn" id="pauta2">
-                <input type="radio" name="radio-btn" id="pauta3">
-
+            <div class="item">
+                <img src="https://occ-0-243-299.1.nflxso.net/dnm/api/v5/rendition/412e4119fb212e3ca9f1add558e2e7fed42f8fb4/AAAABZEK-7pZ1H5FD4cTyUb9qB_KeyJGz5p-kfPhCFv4GU_3mbdm8Xfsy4IBchlG9PFNdGff8cBNPaeMra72VFnot41nt0y3e8RLgaVwwh3UvyM2H2_MkmadWbQUeGuf811K7-cxJJh7gA.jpg">
             </div>
-            <div class="navegacao">
-                <label for="pauta1"></label>
-                <label for="pauta2"></label>
-                <label for="pauta3"></label>
+            <div class="item">
+                <img src="https://occ-0-243-299.1.nflxso.net/dnm/api/v5/rendition/412e4119fb212e3ca9f1add558e2e7fed42f8fb4/AAAABQCoK53qihwVPLRxPEDX98nyYpGbxgi5cc0ZOM4iHQu7KQvtgNyaNM5PsgI0vy5g3rLPZdjGCFr1EggrCPXpL77p2H08jV0tNEmIfs_e8KUfvBJ6Ay5nM4UM1dl-58xA6t1swmautOM.webp">
             </div>
-        </div>
-        
-
-        <div class="videos_Recentes">
-            <h4>Videos Recentes</h4>
-            <ul class="videos_lista"> <!-- o ul é a lista e cada li representa um video-->
-                <li class="video">
-                    <img class="thumbnail" src=""/>
-                    <div class="video_info">
-                        <a href="" class="play_video">
-                        <span class="btn__play"></span> <!-- utilizei span pois vai ocupar o espaço apenas o conteudo, no caso do span que está dentro da ancora, ele seria um botão adicionado por bootstrap-->
-                        </a>
-                        <span class="titulo">Titulo</span>
-                    </div>
-                </li>
-                <li class="video">
-                    <img class="thumbnail" src=""/>
-                    <div class="video_info">
-                        <a href="" class="play_video">
-                        <span class="btn__play"></span>
-                        </a>
-                        <span class="titulo">Titulo</span>
-                    </div>
-                </li>
-                <li class="video">
-                    <img class="thumbnail" src=""/>
-                    <div class="video_info">
-                        <a href="" class="play_video">
-                        <span class="btn__play"></span>
-                        </a>
-                        <span class="titulo">Titulo</span>
-                    </div>
-                </li>
-                <li class="video">
-                    <img class="thumbnail" src=""/>
-                    <div class="video_info">
-                        <a href="" class="play_video">
-                        <span class="btn__play"></span>
-                        </a>
-                        <span class="titulo">Titulo</span>
-                    </div>
-                </li>
-            </ul>
-        </div>
-
-        <div class="videos_Saude">
-            <h4>Saúde e Bem-estar</h4>
-            <ul class="videos_lista">
-                <li class="video">
-                    <img class="thumbnail" src=""/>
-                    <div class="video_info">
-                        <a href="" class="play_video">
-                        <span class="btn__play"></span>
-                        </a>
-                        <span class="titulo">Titulo</span>
-                    </div>
-                </li>
-                <li class="video">
-                    <img class="thumbnail" src=""/>
-                    <div class="video_info">
-                        <a href="" class="play_video">
-                        <span class="btn__play"></span>
-                        </a>
-                        <span class="titulo">Titulo</span>
-                    </div>
-                </li>
-                <li class="video">
-                    <img class="thumbnail" src=""/>
-                    <div class="video_info">
-                        <a href="" class="play_video">
-                        <span class="btn__play"></span>
-                        </a>
-                        <span class="titulo">Titulo</span>
-                    </div>
-                </li>
-                <li class="video">
-                    <img class="thumbnail" src=""/>
-                    <div class="video_info">
-                        <a href="" class="play_video">
-                        <span class="btn__play"></span>
-                        </a>
-                        <span class="titulo">Titulo</span>
-                    </div>
-                </li>
-            </ul>
-
-        </div>
-            <div class="anuncio">
-                <strong> ANÚNCIOS </strong>
-            <!-- os anuncios são puxados pelo JS, então apenas reservei umaa div para inseri-los e ajustar os tamanhos com css-->
+            <div class="item">
+                <img src="https://occ-0-243-299.1.nflxso.net/dnm/api/v5/rendition/412e4119fb212e3ca9f1add558e2e7fed42f8fb4/AAAABdYtAqj8CyaJTWq5taD8Ro_UgwH3nne9QpFGVps-2J3IG-leqrfqXFii4jzZn48nPYTkrlwKQEV0R7_cEKlYBPRzdKqNODc-Oz26IL3LlLgFboXibIWXwxzeYxzuqn0I9TpARjeByw.jpg">
             </div>
-        </div>
-
-        <div class="videos_esportes">
-            <h4>Esportes</h4>
-            <ul class="videos_lista">
-                <li class="video">
-                    <img class="thumbnail" src=""/>
-                    <div class="video_info">
-                        <a href="" class="play_video">
-                        <span class="btn__play"></span>
-                        </a>
-                        <span class="titulo">Titulo</span>
-                    </div>
-                </li>
-                <li class="video">
-                    <img class="thumbnail" src=""/>
-                    <div class="video_info">
-                        <a href="" class="play_video">
-                        <span class="btn__play"></span>
-                        </a>
-                        <span class="titulo">Titulo</span>
-                    </div>
-                </li>
-                <li class="video">
-                    <img class="thumbnail" src=""/>
-                    <div class="video_info">
-                        <a href="" class="play_video">
-                        <span class="btn__play"></span>
-                        </a>
-                        <span class="titulo">Titulo</span>
-                    </div>
-                </li>
-                <li class="video">
-                    <img class="thumbnail" src=""/>
-                    <div class="video_info">
-                        <a href="" class="play_video">
-                        <span class="btn__play"></span>
-                        </a>
-                        <span class="titulo">Titulo</span>
-                    </div>
-                </li>
-            </ul>
-
-        </div>
-        <div class="videos_Saude2">
-            <h4>Saúde e Bem-estar 2</h4>
-            <ul class="videos_lista">
-                <li class="video">
-                    <img class="thumbnail" src=""/>
-                    <div class="video_info">
-                        <a href="" class="play_video">
-                        <span class="btn__play"></span>
-                        </a>
-                        <span class="titulo">Titulo</span>
-                    </div>
-                </li>
-                <li class="video">
-                    <img class="thumbnail" src=""/>
-                    <div class="video_info">
-                        <a href="" class="play_video">
-                        <span class="btn__play"></span>
-                        </a>
-                        <span class="titulo">Titulo</span>
-                    </div>
-                </li>
-                <li class="video">
-                    <img class="thumbnail" src=""/>
-                    <div class="video_info">
-                        <a href="" class="play_video">
-                        <span class="btn__play"></span>
-                        </a>
-                        <span class="titulo">Titulo</span>
-                    </div>
-                </li>
-                <li class="video">
-                    <img class="thumbnail" src=""/>
-                    <div class="video_info">
-                        <a href="" class="play_video">
-                        <span class="btn__play"></span>
-                        </a>
-                        <span class="titulo">Titulo</span>
-                    </div>
-                </li>
-            </ul>
-        </div>
-
-        <div class="anuncio">
-            <strong> ANÚNCIOS </strong>
-        </div>
-
-     </div>
-
-    </main>
-
-
-    <footer>
-        <div class="rodape"> <!--essa div é da parte cinza do footer-->
-        <img src="logo-rodape.png" id="logo_rodape" alt="logo jornal do commercio"/>
-        <img class="icon_footer" src="https://api.iconify.design/entypo-social/youtube-with-circle.svg?color=white" alt="logo do youtube"/>
-        <img class="icon_footer" src="https://api.iconify.design/entypo-social/facebook-with-circle.svg?color=white" alt="logo facebook"/>
-        <img class="icon_footer" src="https://api.iconify.design/ant-design/twitter-circle-filled.svg?color=white" alt="logo twitter"/>
-    <br><br><hr><br>
-        <div class="colunas_footer">
-            <div class="col-33">
-                <a href="#" class="categoria_footer">Videos Recentes</a><br>
-                <a href="#" class="categoria_footer">Saúde e Bem-estar</a><br>
-                <a href="#" class="categoria_footer">Politica</a><br>
-                <a href="#" class="categoria_footer">Esportes</a><br>
+            <div class="item">
+                <img src="https://occ-0-243-299.1.nflxso.net/dnm/api/v5/rendition/412e4119fb212e3ca9f1add558e2e7fed42f8fb4/AAAABbcCX42tsqGbBvO2y9CQv5-7QvYbCfoHtXsuc6NPCtZaKa4l4fBX3XWvUwG9F2A3CTsNpHVmulxBbdXKwK8Q6xGjejd9FoadGkZ7CnGrSl601TOQjzSHJ23NuIPC8j0QMGORL4uRIA.jpg">
             </div>
-            <div class="col-33">
-                <a href="#" class="categoria_footer">Videos Recentes</a><br>
-                <a href="#" class="categoria_footer">Saúde e Bem-estar</a><br>
-                <a href="#" class="categoria_footer">Politica</a><br>
-                <a href="#" class="categoria_footer">Esportes</a><br>
-            </div>
-            <div class="col-33">
-                <a href="#" class="categoria_footer">Videos Recentes</a><br>
-                <a href="#" class="categoria_footer">Saúde e Bem-estar</a><br>
-                <a href="#" class="categoria_footer">Politica</a><br>
-                <a href="#" class="categoria_footer">Esportes</a><br>
-            </div>
-        </div>
-    </div>
-    <br>
-    <p>© 2022 Jornal do Commércio Company</p>
-    <br>
-    <div id="jc_info">
-        <br>
-                <div class="col-33">
-                    <a href="#">Principais Editoriais</a><br>
-                </div>
-                <div class="col-33">
-                    <a href="#">Política de Privacidade</a><br>
-                </div>
-                <div class="col-33">
-                    <a href="#">Anuncie Conosco</a><br>
-                </div>
-        </div><br>
-    </footer>
+            <a href="#section2" class="arrow__btn">›</a>
+        </section>
 
+        <section id="section2">
+            <a href="#section1" class="arrow__btn">‹</a>
+            <div class="item">
+                <img src="https://occ-0-243-299.1.nflxso.net/dnm/api/v5/rendition/412e4119fb212e3ca9f1add558e2e7fed42f8fb4/AAAABVopDZ5Fy9_fk_HO5WxHTXKKjKhtWFupbSjuvPwfLK_vytzon4EwRUdGgYJ34JwPxOTK_NkV3aXfkULMB0Dcct-FyfqzH-X44VXuRMp4QeBHlvKwWeZFpZlGdItPzmmg4scmwhG7SQ.jpg">
+            </div>
+            <div class="item">
+                <img src="https://occ-0-243-299.1.nflxso.net/dnm/api/v5/rendition/412e4119fb212e3ca9f1add558e2e7fed42f8fb4/AAAABTOj1-116yVcgKWMU2dI3GFR4x0fSkiGsqtLLeLUxRR7STaksjAqBTrYlTfrB8nIGnGvXksi0ewXAhVGg6-pLxpFOIfcpjK-pf8D5xehFZo5a6vJbo4L0AGbrzglbyUoq255QBJgRQ.jpg">
+            </div>
+            <div class="item">
+                <img src="https://occ-0-243-299.1.nflxso.net/dnm/api/v5/rendition/a76057bcfd003711a76fb3985b1f2cf74beee3b8/AAAABd3IBDpxbRcHXvRMFCZeKa2aHLU1P4SJtrACMS9om3yhLjqPlvNlmR_fypPxjtbsbnKaC4JZhPSpDG4r_kdxSHHAltWguMcCB-1Y1OShr2zWfUv7Whf_39fNH5ZJ3_0gxQrs0akmQjQz44_LT7jXH5LMZ7iMBAzac5IEj4m7Fn_5OWEGYnVsDsKG-QTommDooULMDF9bEw.jpg">
+            </div>
+            <div class="item">
+                <img src="https://occ-0-243-299.1.nflxso.net/dnm/api/v5/rendition/a76057bcfd003711a76fb3985b1f2cf74beee3b8/AAAABXSd7bhDddcwkq9XpksoQFCHVx29Sxl_h4hb2n3F2GIt32a4XWcOnctQfgnT5qdolv8UML6_xNB5CJ89h56wueb13mYmEBr0sx5e9iLPdtVcOQAOmKXKWHHXwFvJuCUwuNnL3s8eAQwqLXPVMHMEsujM684rUGrZNF2btN2GRy5-RyEslsxZO93V2Q_H2bWs8A8oayt1h5M.webp">
+            </div>
+            <div class="item">
+                <img src="https://occ-0-243-299.1.nflxso.net/dnm/api/v5/rendition/a76057bcfd003711a76fb3985b1f2cf74beee3b8/AAAABbXWODpAWqVXcmmjMA7K-2mPkQpvwCLfSdeyhVXzR8A3MSpdSEnnjf4HEJJTYC-TnktU6njTUGAxmzWEYCaJbk4v_ZeL-7QGzmkvYBjg_N-evr2XmcX-Fanoyvu_nimFP4iigPe4O3Vr_WcgplhwkDrJwPUJa84wRLrNAx3TufN5V7cWRP4indqu5HQahvgFEqfL9zjp4g.jpg">
+            </div>
+            <a href="#section3" class="arrow__btn">›</a>
+        </section>
+
+        <section id="section3">
+            <a href="#section2" class="arrow__btn">‹</a>
+            <div class="item">
+                <img src="https://occ-0-243-299.1.nflxso.net/dnm/api/v5/rendition/412e4119fb212e3ca9f1add558e2e7fed42f8fb4/AAAABRr4YxdaABuAuH_3FmSQZn7BCvLp-UUPsXE9MiYpvFP3CSUHV2zOew5oVqKqqdaOd3tbFVS0Uf67uIs7_eZydlCghg4nK0nMatRpPImABwTOhnNzCLCxdKrua7pPIcPCZqBYTeAO5g.jpg">
+            </div>
+            <div class="item">
+                <img src="https://occ-0-243-299.1.nflxso.net/dnm/api/v5/rendition/412e4119fb212e3ca9f1add558e2e7fed42f8fb4/AAAABTyWK1MKaw8GcObtz47R2Tj7wkLJ7qQu9tk6TVpcoyxpzD4B-zZ569bQ5vGrREBL-MWFkGilXUwy7tCDaj2XOGkUB4RsbbFAmp9NgSr6lygMpUGNHSlyfrFbUORsRkrxSIoh_ggOvg.jpg">
+            </div>
+            <div class="item">
+                <img src="https://occ-0-243-299.1.nflxso.net/dnm/api/v5/rendition/a76057bcfd003711a76fb3985b1f2cf74beee3b8/AAAABY7NwkWEJIfXsn6t3Li4bGSCQ1nEErPisI5ZZtXlC-_VRBZOUrhWK5X3vt3t6SR_cpgVhCwxgQqFFDJhk62Kk8hawOnYGZMr0LKeLczMFV2zalCFjkcdLksvT4HB2LEi6LFyruyk3Uu0LmNGsHfC2A8Bly60smr_3sDbz4RruXcklPOG1qYq9wUVu3zfaiwNvqmG4b8aFA.jpg">
+            </div>
+            <div class="item">
+                <img src="https://occ-0-243-299.1.nflxso.net/dnm/api/v5/rendition/a76057bcfd003711a76fb3985b1f2cf74beee3b8/AAAABemXHOga9feFnOux6I2YyACBD94wvM7N3vcTGIfMpQ_BcaXeoeM9XyzdVdamKtxt0SHXZfvsl6czcp3E48tXMLtHBxuQsh1BjHtPGgJDZ81je_FjItINiqzLtir0A30s_e4KR8G3d7AYAPDjZVOY97bNpzNqtkcHcGp7fGnJByVCps1uLfG9U9tK3Ma1A_3JbRt0NiT2_Q.jpg">
+            </div>
+            <div class="item">
+                <img src="https://occ-0-243-299.1.nflxso.net/dnm/api/v5/rendition/a76057bcfd003711a76fb3985b1f2cf74beee3b8/AAAABVxuRB932hvre-XP0gh6ar5ztoR3Oe3QjKHkyvcDnRak2MKXOrx5H7mFQSvggefMFOppwEs7ZCCpiqrJ_CYGvtvYB9NpU4SWUtNO6uV2u-DTID267AcHjHcGvGBQJ1ufddDkxcGOZyi5MlOQ5QUmBun4652FbYUnib3zMYQDgcna_Pvz8y_HO5fbokxezrRR1JZAAiqFSQ.jpg">
+            </div>
+            <a href="#section1" class="arrow__btn">›</a>
+        </section>
+        </div>
+
+    
 </body>
 </html>
