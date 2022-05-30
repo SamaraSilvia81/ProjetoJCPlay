@@ -149,11 +149,25 @@ nav{
     margin: 0 2% 12px;
 }
 
+#container {
+    display: inline-block;
+    position: relative;
+  }
+  
+  #container figcaption {
+    position: absolute;
+    top: 10rem;
+    right: 20px;
+    font-size: 20px;
+    color: white; 
+  }
+
   .wrapper {
    display: grid;
    grid-template-columns: repeat(3, 100%);
    overflow: hidden;
   }
+  
   .wrapper section {
    width: 100%;
    position: relative;
@@ -167,16 +181,17 @@ nav{
   }
   .wrapper section .item:hover {
    margin: 0 40px;
-   transform: scale(1.2);
+   transform: scale(1.1);
   }
   .wrapper section a {
    position: absolute;
    color: #fff;
    text-decoration: none;
    font-size: 6rem;
-   background: black;
+   background: transparent;
    width: 80px;
    padding: 20px;
+   height: 190px;
    text-align: center;
   }
   .wrapper section a:nth-of-type(1) {
@@ -210,16 +225,17 @@ nav{
    }
    .wrapper2 section .item:hover {
     margin: 0 40px;
-    transform: scale(1.2);
+    transform: scale(1.1);
    }
    .wrapper2 section a {
     position: absolute;
     color: #fff;
     text-decoration: none;
     font-size: 6rem;
-    background: black;
+    background: transparent;
     width: 80px;
     padding: 20px;
+    height: 190px;
     text-align: center;
    }
    .wrapper2 section a:nth-of-type(1) {
@@ -253,16 +269,17 @@ nav{
    }
    .wrapper3 section .item:hover {
     margin: 0 40px;
-    transform: scale(1.2);
+    transform: scale(1.1);
    }
    .wrapper3 section a {
     position: absolute;
     color: #fff;
     text-decoration: none;
     font-size: 6rem;
-    background: black;
+    background: transparent;
     width: 80px;
     padding: 20px;
+    height: 190px;
     text-align: center;
    }
    .wrapper3 section a:nth-of-type(1) {
