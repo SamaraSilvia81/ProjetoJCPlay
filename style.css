@@ -397,7 +397,9 @@ footer{
 .col-33{
     width: 100%;
 }
-
+footer p{
+   text-align: center;
+}
 .container5{
     padding-top: 3%;;
     background: rgb(51, 50, 50);;
