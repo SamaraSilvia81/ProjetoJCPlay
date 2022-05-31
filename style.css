@@ -279,55 +279,35 @@ nav{
 }
 
 
- 
 /* FOOTER */
-footer{
-     font-size: small;
-     text-align: center;
- }
- footer a{
-     text-decoration: none;
- }
-.rodape{
-    background-color: var(--cor4);
-    color: var(--cor1);
-    padding: 2%;
-}
-#logo_rodape{
-    height: 30px;
-    width: 90px;
-    float: left;
-}
-.icon_footer{
-    height: 25px;
-    width: 25px;
-    margin-right: 5px;
-    float: right;
-}
-.rodape a{
-    color: var(--cor2);
-}
-.colunas_footer{
-    display: flex;
-    flex-flow: row wrap;
-    padding: 3px;
-    }
+
 #jc_info{
-    display: flex;
-    flex-flow: row wrap;
-    padding: 3px;
+   display: flex;
+   flex-flow: row wrap;
+   text-align: center;  /* Faz ficar no centro */
+   line-height: 50px; /* Faz ficar no centro */
+   padding-left: 2%;
 }
+
 #jc_info a{
-    color: var(--cor1);
-    margin-bottom: 25px;
+   color: black;
+   text-decoration: none;
 }
+
 .col-33{
-    width: 100%;
+   width: 33%;
 }
-footer p{
-   width:100%;
-   text-align: center;
+
+.categoria_footer{
+   color: #fff;
+   text-decoration: none;
 }
+
+#icon1, #icon2, #icon3{
+   visibility: visible;
+   font-size: 16px;
+}
+
 .container5{
     padding-top: 3%;;
     background: rgb(51, 50, 50);;
@@ -345,10 +325,6 @@ footer p{
 .redes{   /* Para mudar os icons de um agrupamento vertical para horizontal  */
     display: flex;
     margin-left: 60px;
-}
-
-.bi{  /* Permite um espaçamento entre os ícones  */
-    padding: 5px;
 }
 
 .logo{
@@ -386,6 +362,9 @@ h4{
     text-align: left;
 }
 
+
+/* DESTAQUES  */
+
 #title-carousel{
     color: white;
     padding-left: 20px;
@@ -420,8 +399,8 @@ p{
     padding-right: 500px;
 }
 
-.bi{
-    visibility: hidden;
+#share{
+    visibility: hidden !important;
 }
 
 #player{
@@ -439,12 +418,90 @@ p{
   width: 100%;
 }
 
+#player4{
+    height: 320px;
+    width: 100%;
+  }
+  
+#player5{
+    height: 320px;
+    width: 100%;
+  }
+  
+#player6{
+    height: 320px;
+    width: 100%;
+  }
+
 
 /*responsividade*/
 
+@media(max-width:540px){
+
+    /* DESTAQUES  */
+
+.descrition-title{
+    line-height: 0.1rem;
+    font-size: 0.875rem;
+    text-align: left;
+}
+
+.carousel-control-prev{
+    height: 35rem;  
+}
+
+.carousel-control-next{
+   height: 35rem;   
+}
+
+.descrition-body{
+    font-size: 14px;
+    text-align: justify;
+    padding-right: 50px;
+}
+
+#share{
+    visibility: visible;
+}
+
+.swiper-slide{
+    width: 2px;
+    height: 2px;
+    padding-left: 15px;
+    padding-right: 30px;
+    margin-left: 20px;
+}
+
+#container figcaption {
+
+  position: absolute;
+  top: 10rem;
+  right: 20px;
+  font-size: 20px;
+  color: red; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
 
 @media (max-width: 999px){
-
+    
     .carousel-item{
         height: 40rem;
         background-color: rgb(51, 50, 50);
@@ -460,7 +517,7 @@ p{
         padding-left: 150px;
     }
 
-    .bi{
+    #share{
         color: white;
         padding-left: 400px;
         font-size: 26px;
@@ -521,80 +578,22 @@ p{
     }
 
     .icon1, .icon2, .icon3{
-        visibility: visible;
+        visibility: visible !important;
     }
 
     .logo{
         padding-left: 100px;
     }
 
+    .section-with-carousel .carousel-controls1{
+        top: 56rem;
+    }
+
+    .section-with-carousel .carousel-controls2{
+        top: 76rem;
+    }
+
     .footer-bottom{
         padding-left: 200px;
     }
 }
-@media screen and (min-width: 1024px){
-    nav{    
-        height: 100vh;
-    }
-    nav ul li a{
-        margin-left: 3px;
-    }
-    nav ul li a:hover{
-        margin-left: -3%;
-    }
-    .icon_footer{
-        height: 30px;
-        width: 30px;
-    }
-}
-
-@media screen and (min-width: 1024px), screen and (min-width: 640px){
-    input[type="checkbox"]:checked ~ nav{
-        margin-left: 85%;
-        font-size: larger;
-    }
-    #live{
-        margin-top: 15px;
-    }
-    #liveTxt{
-        font-size: large;
-    }
-    .icon{
-        height: 40px;
-        width: 40px;
-    }
-    #logo{
-        margin-left: 10px;
-        height: 60px;
-        width: 180px;
-    }
-    #buscar{ 
-        background-size: 30px;
-    }
-    nav ul li a{
-        padding: 1.5px 1.5px;
-        font-size: large;
-    }
-    .col-33{
-        width: 33%;
-    }
-}
-@media screen and (min-width: 640px){
-    #logo{
-        margin-top: 5px;
-    }
-    nav{
-        width: 40%;
-        margin-left: px;
-    }
-    nav ul li a{
-        font-size: medium;
-    }
-    #menu{
-        margin-top: 5px;
-    }
-    #buscar{ 
-        margin-top: 13px;
-    }
-}
-
