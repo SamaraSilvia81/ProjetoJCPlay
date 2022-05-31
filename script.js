@@ -48,6 +48,33 @@ function onYouTubeIframeAPIReady() {
     }
   });
 
+  player4 = new YT.Player('player4', {
+    height: '360',
+    width: '500',
+    videoId: '2MseOMSjrcM',
+    events: {
+      'onStateChange': onPlayerStateChange4
+    }
+  });
+
+  player5 = new YT.Player('player5', {
+    height: '360',
+    width: '500',
+    videoId: 'qoAziwqWiNM',
+    events: {
+      'onStateChange': onPlayerStateChange5
+    }
+  });
+
+  player6 = new YT.Player('player6', {
+    height: '360',
+    width: '500',
+    videoId: 'J9yYmAGbTFs',
+    events: {
+      'onStateChange': onPlayerStateChange6
+    }
+  });
+
 }
 
 // 5. The API calls this function when the player's state changes.
@@ -81,4 +108,76 @@ function onPlayerStateChange3(event) {
     setTimeout(stopVideo, 6000);
     done = true;
   }
+}
+
+var done = false;
+function onPlayerStateChange4(event) {
+  if (event.data == YT.PlayerState.PLAYING && !done) {
+    setTimeout(stopVideo, 6000);
+    done = true;
+  }
+}
+
+var done = false;
+function onPlayerStateChange5(event) {
+  if (event.data == YT.PlayerState.PLAYING && !done) {
+    setTimeout(stopVideo, 6000);
+    done = true;
+  }
+}
+
+var done = false;
+function onPlayerStateChange6(event) {
+  if (event.data == YT.PlayerState.PLAYING && !done) {
+    setTimeout(stopVideo, 6000);
+    done = true;
+  }
+}
+
+
+
+
+
+
+const sectionsWithCarousel = document.querySelectorAll(
+  ".section-with-carousel"
+);
+
+createOffsets();
+window.addEventListener("resize", createOffsets);
+
+function createOffsets() {
+ 
+  const offset = (window.innerWidth - 1200)/2;
+  const mqLarge = window.matchMedia("(min-width: 1200px)");
+
+}
+
+for (const section of sectionsWithCarousel) {
+  let slidesPerView = [1.5, 2.5, 3.5];
+  if (section.classList.contains("section-with-left-offset")) {
+    slidesPerView = [1.5, 2.5, 3.5];
+  }
+  const swiper = section.querySelector(".swiper");
+  new Swiper(swiper, {
+    slidesPerView: slidesPerView[0],
+    spaceBetween: 15,
+    loop: true,
+    lazyLoading: true,
+    keyboard: {
+      enabled: true
+    },
+    navigation: {
+      prevEl: section.querySelector(".carousel-control-left"),
+      nextEl: section.querySelector(".carousel-control-right")
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: slidesPerView[1]
+      },
+      1200: {
+        slidesPerView: slidesPerView[2]
+      }
+    }
+  });
 }
