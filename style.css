@@ -35,8 +35,6 @@
     height: 60px;
     top: 0;
     z-index: 99;
-    text-align: right;
-    justify-content: right;
     display: grid;
     grid-template-columns: 1fr auto auto auto auto;
     grid-template-rows: 50px;
@@ -45,36 +43,41 @@
 
 #logo{
     margin-left: 10px;
-    height: 60px;
-    width: 180px;
+    margin-top: 10px;
+    height: 35px;
+    width: 105px;
+    background-color: transparent;
 }
 .icon{
-    height: 40px;
-    width: 40px;
+    height: 35px;
+    width: 35px;
     padding: 3px;
 }
 
 nav ul li a{
     text-decoration: none;
     display: block;
-    padding: 8px 3px;
+    padding-top: 2px;
+    padding-bottom: 2px;
     color: var(--cor2);
     text-align: justify;
-    font-size: larger;
+    font-size: small;
 }
 
 nav ul li a:hover{
     background-color: var(--cor6);
     color: var(--cor1);
     font-weight: bolder;
-    margin-left: -3%;
+    margin-left: -18%;
     transition: all 0.2s linear;
+    padding-left: 2px;
 }
 
 hr{
     border: 0;
     height: 1.5px;    
-    background-image: linear-gradient(to right, transparent, rgb(197, 197, 197), transparent);  
+    background-image: linear-gradient(to right, transparent, rgb(197, 197, 197), transparent); 
+    margin-left: -20px; 
 }
 
 /*Menu Interação*/
@@ -90,53 +93,98 @@ input[type="checkbox"]:checked ~ nav{
 
 label{
     display: inline-block;
-    padding: 5px;
-    margin-top: 0;
+    background-color: transparent;
+    margin-top: 10px;
     z-index: 1;
 }
 
 nav{
     position: fixed;
-    padding: 15px;
     margin-top: 60px;
     height: 100%;
     width: 30%;
     display: none;
     justify-content: left;
     background-color: var(--cor4);
+    overflow-y: scroll;
 }
 #menu{
-    top: 15px;
     width: 100%;
     list-style: none;
 }
 
 /*ao vivo*/
+#live{
+    margin-top: 10px;
+}
 #liveTxt{
-    font-size: larger;
-    display: inline-flexbox;
-    flex-flow: row;
+    font-size: medium;
     color: var(--cor5);
-    font-weight: 700;
+    font-weight: 600;
 
+}
+#liveCam{
+    height: 20px;
+    width: 20px;
+    animation: blink 1.5s steps(1, end) infinite;
+}
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  10% {
+    opacity: 0.8;
+  }
+  20% {
+    opacity: 0.6;
+  }
+  30% {
+    opacity: 0.4;
+  }
+  40% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.2;
+}
+60% {
+  opacity: 0.4;
+}
+70% {
+  opacity: 0.6;
+}
+80% {
+  opacity: 0.8;
+}
+90% {
+  opacity: 1;
+}
+100% {
+    opacity: 1;
+  }
 }
 
 /*busca*/
 #buscar{    
-    background: url("https://api.iconify.design/bx/search-alt.svg?color=white") scroll no-repeat right;
-    background-size: 35px;
+    background: url("https://api.iconify.design/clarity/search-line.svg?color=white") scroll no-repeat right;
+    background-size: 25px;
     border: 0;
-    width: 35px;
+    width: 30px;
     color: var(--cor2);
     transition: all 0.1s linear;
-    margin-top: 11px;
+    margin-top: 10px;
     font-size: large;
     height: 30px;
 }
 
 #buscar:focus{
-    width: 200px;
+    position: absolute;
+    left: 15%;
+    background-color: var(--cor1);
+    margin-top: 60px;
+    width: 80%;
     border: 1px;
+    text-align: center;
 }
 
 /*Carousel body */
@@ -306,32 +354,48 @@ nav{
 
 
 /* FOOTER */
-
+footer{
+     font-size: small;
+     text-align: center;
+ }
+ footer a{
+     text-decoration: none;
+ }
+.rodape{
+    background-color: var(--cor4);
+    color: var(--cor1);
+    padding: 2%;
+}
+#logo_rodape{
+    height: 30px;
+    width: 90px;
+    float: left;
+}
+.icon_footer{
+    height: 25px;
+    width: 25px;
+    margin-right: 5px;
+    float: right;
+}
+.rodape a{
+    color: var(--cor2);
+}
+.colunas_footer{
+    display: flex;
+    flex-flow: row wrap;
+    padding: 3px;
+    }
 #jc_info{
-   display: flex;
-   flex-flow: row wrap;
-   text-align: center;  /* Faz ficar no centro */
-   line-height: 50px; /* Faz ficar no centro */
-   padding-left: 2%;
+    display: flex;
+    flex-flow: row wrap;
+    padding: 3px;
 }
-
 #jc_info a{
-   color: black;
-   text-decoration: none;
+    color: var(--cor1);
+    margin-bottom: 25px;
 }
-
 .col-33{
-   width: 33%;
-}
-
-.categoria_footer{
-   color: #fff;
-   text-decoration: none;
-}
-
-#icon1, #icon2, #icon3{
-   visibility: visible;
-   font-size: 16px;
+    width: 100%;
 }
 
 .container5{
@@ -538,3 +602,69 @@ p{
         padding-left: 200px;
     }
 }
+@media screen and (min-width: 1024px){
+    nav{    
+        height: 100vh;
+    }
+    nav ul li a{
+        margin-left: 3px;
+    }
+    nav ul li a:hover{
+        margin-left: -3%;
+    }
+    .icon_footer{
+        height: 30px;
+        width: 30px;
+    }
+}
+
+@media screen and (min-width: 1024px), screen and (min-width: 640px){
+    input[type="checkbox"]:checked ~ nav{
+        margin-left: 85%;
+        font-size: larger;
+    }
+    #live{
+        margin-top: 15px;
+    }
+    #liveTxt{
+        font-size: large;
+    }
+    .icon{
+        height: 40px;
+        width: 40px;
+    }
+    #logo{
+        margin-left: 10px;
+        height: 60px;
+        width: 180px;
+    }
+    #buscar{ 
+        background-size: 30px;
+    }
+    nav ul li a{
+        padding: 1.5px 1.5px;
+        font-size: large;
+    }
+    .col-33{
+        width: 33%;
+    }
+}
+@media screen and (min-width: 640px){
+    #logo{
+        margin-top: 5px;
+    }
+    nav{
+        width: 40%;
+        margin-left: px;
+    }
+    nav ul li a{
+        font-size: medium;
+    }
+    #menu{
+        margin-top: 5px;
+    }
+    #buscar{ 
+        margin-top: 13px;
+    }
+}
+
