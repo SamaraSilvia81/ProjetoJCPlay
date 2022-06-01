@@ -231,7 +231,7 @@ nav{
 
 .section-with-carousel .carousel-controls2 {
     position: absolute;
-    top: 150%;
+    top: 205%;
     left: 0;
     right: 0;
     transform: translateY(-50%);
@@ -400,7 +400,7 @@ p{
 }
 
 #share{
-    visibility: hidden !important;
+    visibility: hidden;
 }
 
 #player{
@@ -434,9 +434,10 @@ p{
   }
 
 
-/*responsividade*/
+  /*responsividade*/
 
-@media(max-width:540px){
+
+@media(max-width:550px){
 
     /* DESTAQUES  */
 
@@ -446,12 +447,8 @@ p{
     text-align: left;
 }
 
-.carousel-control-prev{
-    height: 35rem;  
-}
-
-.carousel-control-next{
-   height: 35rem;   
+.carousel-control-prev .carousel-control-next{
+    visibility: hidden !important;
 }
 
 .descrition-body{
@@ -465,8 +462,137 @@ p{
 }
 
 .swiper-slide{
-    width: 2px;
-    height: 2px;
+    padding-left: 15px;
+    padding-right: 30px;
+    margin-left: 20px;
+}
+
+#container figcaption {
+
+  position: absolute;
+  top: 10rem;
+  right: 20px;
+  font-size: 20px;
+  color: red; 
+}
+
+/*Carousel body */
+
+.thumbTitle{
+    padding-top: 4%;
+    font-size: 25px;
+    line-height: 14px;
+    font-weight: 500;
+    margin: 0 6% 12px;
+}
+
+.swiper-slide{
+    padding-left: 40px;
+    padding-right: 280px;
+    margin-left: 30px;
+}
+
+#container {
+  display: inline-block;
+  position: relative;
+}
+
+#container figcaption {
+
+  position: absolute;
+  top: 10rem;
+  right: 20px;
+  font-size: 20px;
+  color: red; 
+}
+
+.section-with-carousel .carousel-controls1 {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  padding: 0 12px;
+  z-index: 1;
+}
+
+.section-with-carousel .carousel-controls2 {
+    position: absolute;
+    top: 205%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 12px;
+    z-index: 1;
+  }
+
+.carousel-controls1{
+    font-size: 40px;
+    color: blue;
+}
+
+.carousel-controls2{
+    font-size: 40px;
+    color: blue;
+}
+
+}
+
+@media(max-width:800px){
+
+    .cabecalho{
+        padding-right: 655px;
+    }
+
+    #buscar{    
+        background: url("https://api.iconify.design/clarity/search-line.svg?color=white") scroll no-repeat right;
+        background-size: 25px;
+        border: 0;
+        width: 30px;
+        color: var(--cor2);
+        transition: all 0.1s linear;
+        margin-top: 10px;
+        font-size: large;
+        height: 30px;
+    }
+    
+    #buscar:focus{
+        position: absolute;
+        left: 15%;
+        background-color: var(--cor1);
+        margin-top: 17px;
+        width: 15%;
+        border: 1px;
+        text-align: center;
+    }
+
+/* DESTAQUES  */
+
+.descrition-title{
+    line-height: 0.1rem;
+    font-size: 0.875rem;
+    text-align: left;
+}
+
+.carousel-control-prev .carousel-control-next{
+    visibility: hidden !important;
+}
+
+.descrition-body{
+    font-size: 14px;
+    text-align: justify;
+    padding-right: 50px;
+}
+
+#share{
+    visibility: visible;
+}
+
+.swiper-slide{
     padding-left: 15px;
     padding-right: 30px;
     margin-left: 20px;
@@ -482,26 +608,89 @@ p{
 }
 
 
+/*Carousel body */
 
+.thumbTitle{
+    padding-top: 4%;
+    font-size: 25px;
+    line-height: 14px;
+    font-weight: 500;
+    margin: 0 6% 12px;
+}
 
+.swiper-slide{
+    padding-left: 40px;
+    padding-right: 280px;
+    margin-left: 30px;
+}
 
+#container {
+  display: inline-block;
+  position: relative;
+}
 
+#container figcaption {
 
+  position: absolute;
+  top: 10rem;
+  right: 20px;
+  font-size: 20px;
+  color: red; 
+}
 
+.section-with-carousel .carousel-controls1 {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  padding: 0 12px;
+  z-index: 1;
+}
 
+.section-with-carousel .carousel-controls2 {
+    position: absolute;
+    top: 205%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 12px;
+    z-index: 1;
+  }
 
+.carousel-controls1{
+    font-size: 40px;
+    color: blue;
+}
 
-
-
+.carousel-controls2{
+    font-size: 40px;
+    color: blue;
+}
 
 }
 
 
-
-
-
 @media (max-width: 999px){
-    
+
+    .cabecalho{
+        padding-right: 125px;
+    }
+
+    #buscar:focus{
+        position: absolute;
+        left: 55%;
+        background-color: var(--cor1);
+        margin-top: 17px;
+        width: 25%;
+        border: 1px;
+        text-align: center;
+    }
+
     .carousel-item{
         height: 40rem;
         background-color: rgb(51, 50, 50);
@@ -578,7 +767,7 @@ p{
     }
 
     .icon1, .icon2, .icon3{
-        visibility: visible !important;
+        visibility: visible;
     }
 
     .logo{
@@ -590,7 +779,7 @@ p{
     }
 
     .section-with-carousel .carousel-controls2{
-        top: 76rem;
+        top: 93rem;
     }
 
     .footer-bottom{
