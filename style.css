@@ -195,7 +195,7 @@ nav{
 
 .thumbTitle{
     padding-top: 4%;
-    font-size: 25px;
+    font-size: 10px;
     line-height: 14px;
     font-weight: 500;
     margin: 0 6% 12px;
@@ -219,6 +219,10 @@ figcaption{
     color: black;
     font-weight: 500;
     text-align: justify;
+}
+
+.section-with-carousel {
+    padding-top: 15px;
 }
 
 .section-with-carousel .carousel-controls1 {
@@ -303,15 +307,17 @@ img{
 
 #jc_info{
    display: flex;
-   flex-flow: row wrap;
    text-align: center;  /* Faz ficar no centro */
-   line-height: 50px; /* Faz ficar no centro */
    padding-left: 2%;
+   padding-right: 2%;
 }
 
 #jc_info a{
    color: black;
    text-decoration: none;
+   font-size: 0.90625rem;
+    line-height: 1.2rem;
+    color: rgb(209, 202, 202);
 }
 
 .col-33{
@@ -333,13 +339,6 @@ img{
     background: rgb(51, 50, 50);;
     color: #fff;
     font-size: 12px;
-}
-
-.footer-bottom{
-    text-align: center;  /* Faz ficar no centro */
-    line-height: 50px; /* Faz ficar no centro */
-    background-color: #fff;
-    padding-left: 38rem;
 }
 
 .redes{   /* Para mudar os icons de um agrupamento vertical para horizontal  */
@@ -468,7 +467,8 @@ p{
 
   /*responsividade*/
 
-@media(max-width:550px){
+/* Iphone SE */
+@media(max-width:380px){
 
     /* DESTAQUES  */
 
@@ -484,20 +484,25 @@ p{
         padding-right: 50px;
     }
 
-    #share{
-        visibility: visible;
-    }
-
     .carousel-controls1 .carousel-control-left{
-        padding-top: 6rem !important;
+        padding-top: 5rem;
+        color: black;
     }
 
     .carousel-controls1 .carousel-control-right{
-        padding-top: 6rem !important;
+        padding-top: 5rem;
+        color: black;
     }
 
     .carousel-controls2 .carousel-control-right{
-        padding-bottom: 32rem !important;
+        padding-bottom: 15rem;
+        color: black
+    
+    }
+
+    .carousel-controls2 .carousel-control-left{
+        padding-bottom: 15rem;
+        color: black;
     }
 
     /*Carousel body */
@@ -532,11 +537,52 @@ p{
         margin-left: 60px;
     }
 
-    .footer-bottom{
+    .footer-bottom-text {
+        text-align: center;
+        padding: 0;
         padding-top: 10px;
-        padding-right:200px;
     }
 }
+
+/* Iphone XR */
+@media(max-width:415px) { 
+
+    /* DESTAQUES  */
+
+    .carousel-controls1 .carousel-control-left{
+        padding-top: 8rem;
+        color: black;
+    }
+
+    .carousel-controls1 .carousel-control-right{
+        padding-top: 8rem;
+        color: black;
+    }
+
+    .carousel-controls2 .carousel-control-right{
+        padding-bottom: 70rem;
+        color: black
+    
+    }
+
+    .carousel-controls2 .carousel-control-left{
+        padding-bottom: 70rem;
+        color: black;
+    }
+
+    /*Carousel body */
+
+    .logo{
+        margin-left: 60px;
+    }
+
+    .footer-bottom-text {
+        text-align: center;
+        padding: 0;
+        padding-top: 10px;
+    }
+}
+
 
 @media(max-width:800px){
 
