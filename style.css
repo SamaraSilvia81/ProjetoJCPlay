@@ -509,6 +509,12 @@ p{
         font-weight: 500;
         margin: 0 6% 12px;
     }
+    
+    #container:hover{
+       -webkit-transform:scale(1.1);
+       transform: scale(1.1);
+       cursor: pointer;
+   }
 
     figcaption{
         top: 15rem;
@@ -536,6 +542,12 @@ p{
 
     .cabecalho{
         padding-right: 655px;
+    }
+    
+    #container:hover{
+       -webkit-transform:scale(1.1);
+       transform: scale(1.1);
+       cursor: pointer;
     }
 
     #buscar{    
@@ -625,6 +637,12 @@ p{
 
     .cabecalho{
         padding-right: 125px;
+    }
+    
+    #container:hover{
+       -webkit-transform:scale(1.1);
+       transform: scale(1.1);
+       cursor: pointer;
     }
     
     #buscar:focus{
