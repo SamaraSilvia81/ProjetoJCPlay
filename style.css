@@ -8,7 +8,7 @@
     --cor1: rgb(31,31,31);
     --cor2: white;
     --cor3: rgb(58, 57, 57);
-    --cor4: rgb(82, 81, 80);
+    --cor4: rgb(80, 80, 80);
     --cor5: #ec5151; 
     --cor6: #cecece; 
     --tileBorderRadius:4px;
@@ -26,19 +26,20 @@
     bottom: 0;
     top: 0;
     background-color: rgba(54, 38, 38, 0.6);
+    z-index: 80;
   }
 
 .cabecalho{
     background-color: var(--cor1);
     position: fixed;
-    width: 100%;
+    width: 100vw;
     height: 60px;
     top: 0;
     z-index: 99;
     display: grid;
     grid-template-columns: 1fr auto auto auto auto;
     grid-template-rows: 50px;
-    column-gap: 10px;
+    column-gap: 8px;
 }
 
 #logo{
@@ -51,33 +52,26 @@
 .icon{
     height: 35px;
     width: 35px;
-    padding: 3px;
 }
 
 nav ul li a{
     text-decoration: none;
     display: block;
+    margin-left: -3vw;
     padding-top: 2px;
     padding-bottom: 2px;
     color: var(--cor2);
     text-align: justify;
-    font-size: small;
+    font-size: medium;
+    font-weight: lighter;
 }
 
 nav ul li a:hover{
     background-color: var(--cor6);
     color: var(--cor1);
     font-weight: bolder;
-    margin-left: -18%;
     transition: all 0.2s linear;
     padding-left: 2px;
-}
-
-hr{
-    border: 0;
-    height: 1.5px;    
-    background-image: linear-gradient(to right, transparent, rgb(197, 197, 197), transparent); 
-    margin-left: -20px; 
 }
 
 /*Menu Interação*/
@@ -88,13 +82,13 @@ input[type="checkbox"]{
 
 input[type="checkbox"]:checked ~ nav{
     display: flex;
-    margin-left: 70%;
+    margin-left: 65%;
 }
 
 label{
     display: inline-block;
     background-color: transparent;
-    margin-top: 10px;
+    margin-top: 9px;
     z-index: 1;
 }
 
@@ -224,7 +218,7 @@ main{
 
 .swiper-slide{
     padding-left: 40px;
-    padding-right: 2800px;
+    padding-right: 280px;
     margin-left: 30px;
 }
 
@@ -412,8 +406,20 @@ h4{
     padding-top: 20px;
     text-transform: uppercase;
 }
-
+.carousel-caption{
+    position: relative;
+    color: #fff;
+    margin-left: -10vw;
+    margin-right: -10vw;
+    text-align: center;
+}
+.carousel-item{
+    height: 70vh;
+    background-color: rgb(51, 50, 50);
+    width: 100%;
+}
 .descrition-title{
+    padding-top: 10px;
     line-height: 0.1rem;
     font-size: 0.875rem;
     text-align: left;
@@ -421,7 +427,7 @@ h4{
 
 .carousel-inner{
     padding-top: 55px;
-    padding-bottom: 50px;
+    padding-bottom: 10px;
     background-color: rgb(51, 50, 50);
 }
 
@@ -435,23 +441,10 @@ p{
     padding-right: 500px;
 }
 
-#share{
-    visibility: hidden;
-}
-
-#player{
-  height: 320px;
+#player, #player2, #player3{
+  height: 30vh;
   width: 100%;
-}
-
-#player2{
-  height: 320px;
-  width: 100%;
-}
-
-#player3{
-  height: 320px;
-  width: 100%;
+  margin: 0;
 }
 
 /* DESTAQUES EXCLUSIVOS DE ESPORTES */
