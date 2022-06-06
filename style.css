@@ -446,6 +446,68 @@ p{
   width: 100%;
   margin: 0;
 }
+/*categorias esportes*/
+
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+  transition: 0.3s ease all;
+}
+
+body {
+  background: white;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+.swiper-slide {
+  text-align: center;
+  background-color: rgb(250, 249, 249);
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  transform: scale(1.1);
+}
+
+h1 {
+  text-align: center;
+  color: black;
+  text-transform: uppercase;
+}
+
+.timeEsportes {
+  text-align: center;
+  color: black;
+  text-transform: uppercase;
+}
+
+h2 {
+  text-transform: uppercase;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+
+::after {
+  color: white;
+}
 
 /* DESTAQUES EXCLUSIVOS DE ESPORTES */
 
