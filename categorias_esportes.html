@@ -7,18 +7,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Esportes</title>
 
-    <link href="style.css" rel="stylesheet">
-    <script src="script.js" defer></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
-
-    </script>
-
+    
+    <!--Links Extras-->
+    
+    <link href="style2.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
     <!--Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
+    <script src="script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  
 </head>
 
 <body class="body">
@@ -27,21 +32,22 @@
 
         <!-- Nav do Menu-->
 
-        <img id= "logo" src="Recursos/logo.png" alt="JC Play"><a href="home.html"></a></img>
+       <a href="home.html"><img id= "logo" src="Recursos/logo.png" alt="JC Play"></img></a>
         <div id="live">
-        <span href="" id="liveTxt"> <img src="https://api.iconify.design/bi/record-fill.svg?color=%23ec5151" class="icon" id="liveCam"/>Ao vivo</span>
+        <span><img src="https://api.iconify.design/bi/record-fill.svg?color=%23ec5151" class="icon" id="liveCam"/><img src="Recursos/ao vivo sem bola.png" alt="ao vivo" id="liveTxt"></span>
         </div>
-        <input type="search" id="buscar" placeholder="   Pesquisar..."/>
+        <img src="https://api.iconify.design/clarity/search-line.svg?color=white" id="buscar" onclick="pesquisar()"/>
+        <div id="campoPesquisa"></div>
         <input type="checkbox" id="menuH" onclick="fade()">
         <label for="menuH"><img class="icon" src="https://api.iconify.design/clarity/menu-line.svg?color=white"></label>
           <nav>
            <ul id="menu"><br>
-            <li><a href="#">Home</a></li><hr>
+            <li><a href="home.html">Home</a></li><hr>
             <li><a href="#">Ao vivo</a></li><hr>
             <li><a href="#">Cultura</a></li>
             <li><a href="#">Esportes</a></li>
             <li><a href="#">Política</a></li>
-            <li><a href="#">Saúde e Bem-estar</a></li>
+            <li><a href="#">Saúde</a></li>
             <li><a href="#">Música</a></li>
            </ul>
           </nav>
@@ -168,58 +174,69 @@
     <br>
 
     <footer>
-        <div class="container5">
-            <div class="row">
-                <div class="col-lg-3 mb-3">
-                    <h5 class="logo">JC PLAY</h5>
-
-                </div>
-
-                <div class="col-6 col-lg-2 mb-3">
-                    <h5 class="title-footer">Company</h5>
-                    <dl>
-                        <dt><a href="" class="categoria_footer">Videos Recentes</a></dt>
-                        <dt><a href="" class="categoria_footer">Saúde e Bem-estar</a></dt>
-                        <dt><a href="" class="categoria_footer">Politica</a></dt>
-                        <dt> <a href="" class="categoria_footer">Esportes</a></dt>
-                    </dl>
-                </div>
-
-                <div class="col-6 col-lg-2 mb-3">
-                    <h5 class="title-footer">Get Help</h5>
-                    <dl>
-                        <dt><a href="" class="categoria_footer">Videos Recentes</a></dt>
-                        <dt><a href="" class="categoria_footer">Saúde e Bem-estar</a></dt>
-                        <dt><a href="" class="categoria_footer">Politica</a></dt>
-                        <dt> <a href="" class="categoria_footer">Esportes</a></dt>
-                    </dl>
-                </div>
-
-                <div class="col-6 col-lg-2 mb-3">
-                    <h5 class="title-footer">Online Chat</h5>
-                    <dl>
-                        <dt><a href="" class="categoria_footer">Videos Recentes</a></dt>
-                        <dt><a href="" class="categoria_footer">Saúde e Bem-estar</a></dt>
-                        <dt><a href="" class="categoria_footer">Politica</a></dt>
-                        <dt> <a href="" class="categoria_footer">Esportes</a></dt>
-                    </dl>
-                </div>
-
-                <div class="col-6 col-lg-2 mb-3">
-                    <h5 class="title-footer">Contact Us</h5>
-                    <dl>
-                        <dt><a href="" class="categoria_footer"><i id="icon1" class="bi bi-youtube"></i></a></dt>
-                        <dt><a href="" class="categoria_footer"><i id="icon2" class="bi bi-facebook"></i></a></dt>
-                        <dt><a href="" class="categoria_footer"><i id="icon3" class="bi bi-twitter"></i></a></dt>
-                    </dl>
-                </div>
-            </div>
-        </div>
-
-        <div class="footer-bottom">
-            <p> © 2022 Jornal do Commércio Company</p>
-        </div>
-
+                        <div class="container5">
+                    <div class="row">
+                      <div class="col-lg-3 mb-3">
+                        <h5 class="logo">JC PLAY</h5>
+                        
+                      </div>
+        
+                      <div class="col-6 col-lg-2 mb-3">
+                        <h5 class="title-footer">Institucional</h5>
+                        <dl>
+                            <dt><a href="" class="categoria_footer">Quem somos</a></dt>
+                            <dt><a href="" class="categoria_footer">Privacidade</a></dt>
+                            <dt><a href="" class="categoria_footer">LGPD</a></dt>
+                            <dt> <a href="" class="categoria_footer">Expediente</a></dt>
+                      </dl>
+                      </div>
+        
+                      <div class="col-6 col-lg-2 mb-3">
+                        <h5 class="title-footer">Serviços</h5>
+                        <dl>
+                          <dt><a href="" class="categoria_footer">Notícias pelo whatsapp</a></dt>
+                          <dt><a href="" class="categoria_footer">Assine JC</a></dt>
+                          <dt><a href="" class="categoria_footer">Newsletter JC</a></dt>
+                          <dt> <a href="" class="categoria_footer">Publicidade Legal</a></dt>
+                      </dl>
+                      </div>
+        
+                      <div class="col-6 col-lg-2 mb-3">
+                        <h5 class="title-footer">Canais</h5>
+                        <dl>
+                            <dt><a href="" class="categoria_footer">Jornal do Commercio</a></dt>
+                            <dt><a href="" class="categoria_footer">Rádio Jornal</a></dt>
+                            <dt><a href="" class="categoria_footer">JC Clube</a></dt>
+                            <dt><a href="" class="categoria_footer">Blogs</a></dt>
+                      </dl>
+                      </div>
+        
+                      <div class="col-6 col-lg-2 mb-3">
+                        <h5 class="title-footer">Contatos</h5>
+                        <dl>
+                            <dt><a href="" class="categoria_footer"><i id="icon1" class="bi bi-youtube"></i></a></dt>
+                            <dt><a href="" class="categoria_footer"><i id="icon2" class="bi bi-facebook"></i></a></dt>
+                            <dt><a href="" class="categoria_footer"><i id="icon3" class="bi bi-twitter"></i></a></dt>
+                      </dl>
+                      </div>
+                      
+        
+                    </div>
+                  </div>
+        
+                    <p class="footer-bottom-text"> © 2022 Jornal do Commércio Company</p>
+                  <div id="jc_info">
+                      <br>
+                        <div class="col-33">
+                            <a href="#">Principais Editoriais</a><br>
+                        </div>
+                        <div class="col-33">
+                            <a href="#">Política de Privacidade</a><br>
+                        </div>
+                        <div class="col-33">
+                            <a href="#">Anuncie Conosco</a><br>
+                        </div>
+                    </div><br>
     </footer>
 
 </body>
