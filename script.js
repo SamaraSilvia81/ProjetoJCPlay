@@ -8,7 +8,44 @@ function fade() {
     fade.style.display = "none";
   }
 }
+function pesquisar(){
+  const div = document.getElementById("campoPesquisa");
+  const input = document.createElement("input");
+  const button = document.createElement("button");
+  const fechar = document.createElement("span");
+  const btnPesquisar = document.createElement("img");
+  const btnFechar = document.createElement("img")
 
+  div.innerHTML = "";
+
+  input.type = "text";
+  input.id = "pesquisa";
+  input.placeholder = "Pesquisar palavra-chave...";
+
+  button.id = "fazerPesquisa";
+  button.onclick= "fazerPesquisa()";
+
+  btnPesquisar.src = "https://api.iconify.design/clarity/search-line.svg?color=white";
+  btnPesquisar.className = "icon";
+
+  fechar.id = "fechar";
+
+  btnFechar.className = "icon";
+  btnFechar.src ="https://api.iconify.design/ep/circle-close.svg?color=white"
+
+  fechar.appendChild(btnFechar);
+  button.appendChild(btnPesquisar);
+  div.appendChild(input);
+  div.appendChild(button);
+  div.appendChild(fechar);
+
+  div.style.display = "flex";
+  fechar.onclick = () => {
+
+  const pesquisa = document.getElementById("campoPesquisa");
+  pesquisa.style.display = "none";
+}
+}
 // 2. This code loads the IFrame Player API code asynchronously.
 let tag = document.createElement('script');
   
