@@ -8,7 +8,7 @@
     --cor1: rgb(31,31,31);
     --cor2: white;
     --cor3: rgb(58, 57, 57);
-    --cor4: rgb(80, 80, 80);
+    --cor4: rgb(82, 81, 80);
     --cor5: #ec5151; 
     --cor6: #cecece; 
     --tileBorderRadius:4px;
@@ -198,7 +198,79 @@ nav{
 main{
     overflow-x:hidden;
 }
+
+/* DESTAQUES HOME E ESPORTES */
+
+#title-carousel{
+    color: white;
+    padding-left: 20px;
+    padding-top: 20px;
+    text-transform: uppercase;
 }
+
+.title-destaque{
+    font-size: calc(1.275rem + .3vw);
+}
+
+.descrition-body{
+    font-size: 0.90625rem;
+    line-height: 1.2rem;
+    color: rgb(209, 202, 202);
+    text-align:left;
+}
+
+.descrition-title{
+    line-height: 0.1rem;
+    font-size: 0.875rem;
+    text-align: left;
+}
+
+.carousel-inner{
+    padding-top: 55px;
+    padding-bottom: 50px;
+    height: 50rem;
+    background-color: rgb(51, 50, 50);
+}
+
+.carousel-caption {
+    position: absolute;
+    right: 15%;
+    bottom: 1.25rem;
+    left: 15%;
+    top: 20rem;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    color: #fff;
+    text-align: center;
+}
+
+.descrition-title {
+    font-family: nyt-franklin, helvetica, arial, sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.0125rem;
+    color: rgb(128, 123, 123);
+    margin-top: 0.9375rem;
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+    text-align: justify;
+}
+
+
+#player{
+  height: 320px;
+  width: 100%;
+}
+
+#player2{
+  height: 320px;
+  width: 100%;
+}
+
+#player3{
+  height: 320px;
+  width: 100%;
+}
+
 
 /*Carousel body */
 
@@ -206,19 +278,17 @@ main{
     text-decoration:none !important; 
 }
 
+.link_categoria:hover{
+    cursor: pointer;
+}
+
 .thumbTitle{
-    padding-top: 4%;
-    font-size: 10px;
+    padding-top: 10%;
+    font-size: 25px;
     line-height: 14px;
     font-weight: 500;
     margin: 0 6% 12px;
     color: black;
-}
-
-.swiper-slide{
-    padding-left: 15px;
-    padding-right: 30px;
-    margin-left: 15px;
 }
 
 figcaption{
@@ -228,66 +298,77 @@ figcaption{
 }
 
 .description-home{
-    border: 1px solid red;
-    width: 350px;
-    height: 150px;
-    
-    color: black;
-    font-size: 1.2rem;
+    font-size: 20px;
+    width: 230px;
     font-weight: 500;
+    line-height: 1.5rem;
     text-align: justify;
 }
 
-.section-with-carousel {
-    padding-top: 15px;
+.swiper-slide{
+    top: 1rem;
+    padding-right: 11rem;
+    padding-left: 2.5rem;
+    margin-left: 2.5rem;
 }
 
-.section-with-carousel .carousel-controls1 {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  transform: translateY(-50%);
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 0 12px;
-  z-index: 1;
+img{
+    width: 16rem;
 }
 
-.section-with-carousel .carousel-controls2 {
-    position: absolute;
-    top: 205%;
-    left: 0;
-    right: 0;
-    transform: translateY(-50%);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 0 12px;
-    z-index: 1;
-  }
+#container:hover{
+    -webkit-transform:scale(1.1);
+    transform: scale(1.1);
+    cursor: pointer;
+ }
 
 .carousel-controls1{
     font-size: 40px;
-    color: blue;
+    color: black;
 }
 
 .carousel-controls2{
     font-size: 40px;
-    color: blue;
+    color: black;
 }
 
-img{
-    padding-top: 6px;
+ .carousel-controls1 .carousel-control-left{
+    padding-top: 36rem;
 }
 
-#container:hover{
-   -webkit-transform:scale(1.1);
-   transform: scale(1.1);
-   cursor: pointer;
+.carousel-controls1 .carousel-control-right{
+    padding-top: 36rem;
 }
 
+.carousel-controls2 .carousel-control-right{
+    padding-bottom: 15rem;
+}
+
+.section-with-carousel .carousel-controls1 {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 12px;
+    z-index: 12;
+  }
+  
+  .section-with-carousel .carousel-controls2 {
+      position: absolute;
+      top: 205%;
+      left: 0;
+      right: 0;
+      transform: translateY(-50%);
+      display: flex;
+      justify-content: space-between;
+      padding: 0 12px;
+      z-index: 1;
+    }
+
+    
 /* ESPORTES */
 
 .container1{
@@ -298,6 +379,7 @@ img{
   display: flex;
   flex-direction: row;
 }
+
 .container2{
     margin-left: 50px;
 }
@@ -326,8 +408,53 @@ img{
     font-size: 30px;
 }
 
+/* DESTAQUES EXCLUSIVOS DE ESPORTES */
+
+.carousel-inner-esportes{
+    padding-top: 55px;
+    padding-bottom: 50px;
+    height: 55rem;
+    background-color: rgb(51, 50, 50);
+}
+
+#subtitle-carousel{
+    line-height: 0.2rem;
+    font-size: 1rem;
+    text-align: left;
+    padding-left: 20px;
+    padding-bottom: 1rem;
+    color: rgb(185, 175, 175);
+}
+
+.indicador-esportes{
+    padding-top: 15px;
+    background-color: #0C7B34;
+}
+
+#player4{
+    height: 320px;
+    width: 100%;
+  }
+  
+#player5{
+    height: 320px;
+    width: 100%;
+  }
+  
+#player6{
+    height: 320px;
+    width: 100%;
+  }
+
+
+  /* Carossel de Esportes */
+
+ 
 /* FOOTER */
 
+footer{
+    margin-top: 30px;
+}
 #jc_info{
    display: flex;
    text-align: center;  /* Faz ficar no centro */
@@ -339,6 +466,15 @@ img{
    color: black;
    text-decoration: none;
    font-size: 0.90625rem;
+    line-height: 1.2rem;
+    color: rgb(209, 202, 202);
+}
+
+
+.footer-bottom-text {
+    color: black;
+    text-align: center;
+    font-size: 0.90625rem;
     line-height: 1.2rem;
     color: rgb(209, 202, 202);
 }
@@ -405,386 +541,617 @@ h4{
     padding-top: 15px;
 }
 
+/* SAMSUNG GALAXY 8 - MIN 360 */
 
-/* DESTAQUES HOME E ESPORTES */
-
-#title-carousel{
-    color: white;
-    padding-left: 20px;
-    padding-top: 20px;
-    text-transform: uppercase;
-}
-
-.descrition-title{
-    line-height: 0.1rem;
-    font-size: 0.875rem;
-    text-align: left;
-}
-
-.carousel-inner{
-    padding-top: 55px;
-    padding-bottom: 50px;
-    background-color: rgb(51, 50, 50);
-}
-
-.carousel-caption{
-    height: 220px;
-}
-
-p{
-    font-size: 1rem;
-    text-align: justify;
-    padding-right: 500px;
-}
-
-#player{
-  height: 320px;
-  width: 100%;
-}
-
-#player2{
-  height: 320px;
-  width: 100%;
-}
-
-#player3{
-  height: 320px;
-  width: 100%;
-}
-
-/* DESTAQUES EXCLUSIVOS DE ESPORTES */
-
-#subtitle-carousel{
-    line-height: 0.2rem;
-    font-size: 1rem;
-    text-align: left;
-    padding-left: 20px;
-    color: rgb(185, 175, 175);
-}
-
-.indicador-esportes{
-    padding-top: 15px;
-    background-color: rgb(149, 218, 47);
-    /*rgb(51, 50, 50)*/
-}
-
-#player4{
-    height: 320px;
-    width: 100%;
-  }
-  
-#player5{
-    height: 320px;
-    width: 100%;
-  }
-  
-#player6{
-    height: 320px;
-    width: 100%;
-  }
-
-/*video*/
-
-.vescolhido{
-    background-color: rgba(0, 0, 0, 0.88);
-    color: white;
-}
-.vescolhido #player5{
-    height: 320px;
-    width: 100%;
-    padding: 10px;
-    margin-top: 20px;
-}
-#head-expandir{
-    margin-left: 15px;
-    display: inline-flex;
-}
-#seta-exp{
-    padding-left: 10px;
-    padding-top: 10px;
-    font-size:18px;
-}
-#video-desc{
-    display: none;
-    font-size: 15rem;
-    padding:  10px 20px;
-}
-#advertising{
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    height: 300px;
-    width: 250px;
-    background-color: rgb(163, 183, 201);
-}
-#ad{
-    float: right;
-    font-size: 30px;
-}
-
-
-  /*responsividade*/
-
-/* Iphone SE */
-@media(max-width:380px){
-
-    /* DESTAQUES  */
-
-    .descrition-title{
-        line-height: 0.1rem;
-        font-size: 0.875rem;
-        text-align: left;
-    }
-
-    .descrition-body{
-        font-size: 14px;
-        text-align: justify;
-        padding-right: 50px;
-    }
+@media (min-width:360px)  {
 
     .carousel-controls1 .carousel-control-left{
-        padding-top: 5rem;
-        color: black;
+        padding-top: 25rem;
     }
 
     .carousel-controls1 .carousel-control-right{
-        padding-top: 5rem;
-        color: black;
+        padding-top: 25rem;
     }
-
+    
     .carousel-controls2 .carousel-control-right{
-        padding-bottom: 15rem;
-        color: black
-    
-    }
-
-    .carousel-controls2 .carousel-control-left{
-        padding-bottom: 15rem;
-        color: black;
-    }
-
-    /*Carousel body */
-
-    .thumbTitle{
-        padding-top: 4%;
-        font-size: 25px;
-        line-height: 14px;
-        font-weight: 500;
-        margin: 0 6% 12px;
-    }
-    
-    #container:hover{
-       -webkit-transform:scale(1.1);
-       transform: scale(1.1);
-       cursor: pointer;
-   }
-
-    figcaption{
-        top: 15rem;
-        left: 22rem;
-        font-size: 20px;
-    }
-
-    .description-home{
-        font-size: 20px;
-        font-weight: 500;
-        text-align: justify;
-    }
-
-    .logo{
-        margin-left: 60px;
-    }
-
-    .footer-bottom-text {
-        text-align: center;
-        padding: 0;
-        padding-top: 10px;
-    }
-}
-
-/* Iphone XR */
-@media(max-width:415px) { 
-
-    /* DESTAQUES  */
-
-    .carousel-controls1 .carousel-control-left{
-        padding-top: 8rem;
-        color: black;
-    }
-
-    .carousel-controls1 .carousel-control-right{
-        padding-top: 8rem;
-        color: black;
-    }
-
-    .carousel-controls2 .carousel-control-right{
-        padding-bottom: 70rem;
-        color: black
-    
-    }
-
-    .carousel-controls2 .carousel-control-left{
-        padding-bottom: 70rem;
-        color: black;
-    }
-
-    /*Carousel body */
-
-    .logo{
-        margin-left: 60px;
-    }
-
-    .footer-bottom-text {
-        text-align: center;
-        padding: 0;
-        padding-top: 10px;
-    }
-}
-
-
-@media(max-width:800px){
-    #container:hover{
-       -webkit-transform:scale(1.1);
-       transform: scale(1.1);
-       cursor: pointer;
-    }
-
-    /* DESTAQUES  */
-
-    .descrition-title{
-        line-height: 0.1rem;
-        font-size: 0.875rem;
-        text-align: left;
-    }
-
-    .descrition-body{
-        font-size: 14px;
-        text-align: justify;
-        padding-right: 50px;
-    }
-
-}
-
-
-    /*Carousel body */
-
-    .thumbTitle{
-        padding-top: 4%;
-        font-size: 25px;
-        line-height: 14px;
-        font-weight: 500;
-        margin: 0 6% 12px;
+        padding-bottom: 35rem;
     }
 
     .swiper-slide{
-        padding-left: 40px;
-        padding-right: 280px;
-        margin-left: 30px;
+        top: 1rem;
+        padding-right: 11rem;
+        padding-left: 2rem;
+        margin-left: 2rem;
     }
 
-    .carousel-controls1{
-        font-size: 40px;
-        color: blue;
+    .logo{
+        margin-left: 150px;
+    }
+    
+}
+
+/* IPHONE SE - MIN 375 */
+
+@media (min-width:375px)  {
+
+    .carousel-controls1 .carousel-control-left { 
+        padding-top: 36rem;
+    }
+    
+    .carousel-controls1  .carousel-control-right{ 
+        padding-top: 36rem;
     }
 
-    .carousel-controls2{
-        font-size: 40px;
-        color: blue;
+    .carousel-controls2 .carousel-control-right{
+        padding-bottom: 15rem;
     }
 
-     .carousel-controls1 .carousel-control-left{
+    .swiper-slide{
+        top: 1rem;
+        padding-right: 9rem;
+        padding-left: 1rem;
+        margin-left: 1rem;
+    }
+
+    
+}
+
+/* IPHONE 12 PRO E PIXEL 5 - 390 */
+
+@media (min-width:390px)  {
+
+    .carousel-controls1 .carousel-control-left{
+        padding-top: 15rem;
+    }
+
+    .carousel-controls1 .carousel-control-right{
+        padding-top: 15rem;
+    }
+    
+    .carousel-controls2 .carousel-control-right{
+        padding-bottom: 62rem;
+    }
+    
+}
+
+/* GALAXY ULTRA E GALAXY A51- 412 */
+
+@media (min-width:412px)  {
+
+    .carousel-controls1 .carousel-control-left{
         padding-top: 5rem;
     }
 
     .carousel-controls1 .carousel-control-right{
         padding-top: 5rem;
     }
-
+  
     .carousel-controls2 .carousel-control-right{
-        padding-bottom: 32rem;
+        padding-bottom: 78rem;
     }
 
+    .swiper-slide{
+        top: 1rem;
+        padding-left: 0.5rem;
+        margin-left: 1rem;
+    }
 }
 
+/*IPHONE XR - 414 */
 
-@media (max-width: 999px){
+@media (min-width:414px)  {
 
-    #container:hover{
-       -webkit-transform:scale(1.1);
-       transform: scale(1.1);
-       cursor: pointer;
+    .carousel-controls1 .carousel-control-left {
+        padding-top: 8rem;
     }
 
-    .carousel-item{
-        height: 40rem;
-        background-color: rgb(51, 50, 50);
-        padding: 20px;
-        width: 100%;
-        box-sizing: border-box;
+    .carousel-controls1 .carousel-control-right{
+        padding-top:8rem;
     }
-
-    .footer-bottom{
-        text-align: center;  /* Faz ficar no centro */
-        line-height: 50px; /* Faz ficar no centro */
-        background-color: #fff;
-        padding-left: 50px;
-    }
-
-    .carousel-caption{
-        text-align: justify;
-        color: black;
-        height: 280px;
-    }
-
-
-    .d-block{
-        height: 20rem;
-    }
-
-    h4{
-        font-family: nyt-cheltenham, georgia, "times new roman", times, serif;
-        color: rgb(255, 255, 255);
-        line-height: 2.125rem;
-        font-size: 1.875rem;
-        font-weight: 600;
-        font-style: normal;
-        margin-bottom: 0px;
-        text-align: left;
-    }
-
-    .descrition-title{
-        font-family: nyt-franklin, helvetica, arial, sans-serif;
-        font-weight: 300;
-        letter-spacing: 0.0125rem;
-        color: rgb(128, 123, 123);
-        margin-top: 0.9375rem;
-        font-size: 0.875rem;
-        line-height: 1.125rem;
-        text-align: justify;
     
+    .carousel-controls2 .carousel-control-right{
+        padding-bottom: 75rem;
+    }
+}
+
+/*SURFACE DUO - 540 */
+
+@media (min-width:540px) and (min-height:720px)   {
+
+    .carousel-inner{
+        padding-top: 55px;
+        padding-bottom: 50px;
+        height: 45rem;
+        background-color: rgb(51, 50, 50);
     }
 
-    p{
-        font-size: 0.90625rem;
-        line-height: 1.2rem;
-        color: rgb(209, 202, 202);
-        text-align: justify;
-        padding-right: 0px;
-    }   
-
-    .swiper-button-prev, .swiper-button-next{
-        padding-top: 38rem;
+    .carousel-inner-esportes{
+        padding-top: 55px;
+        padding-bottom: 50px;
+        height: 48rem;
+        background-color: rgb(51, 50, 50);
     }
 
-    .icon1, .icon2, .icon3{
-        visibility: visible;
+    iframe{
+        width: 400px;
+        height: 315px;
+    }
+
+    .carousel-controls1 .carousel-control-left { 
+        padding-top: 27rem;
+    }
+    
+    .carousel-controls1  .carousel-control-right{ 
+        padding-top: 27rem;
+    }
+
+    .carousel-controls2 .carousel-control-right{
+        padding-bottom: 22rem;
+    }
+
+    .swiper-slide{
+        top: 1rem;
+        margin-left: 5rem;
+    }
+
+    img{
+        width: 25rem;
     }
 
     .logo{
-        padding-left: 100px;
+        margin-left: 200px;
+    }
+    
+}
+
+/* IPAD MINI - MIN 770 */
+
+@media (min-width:768px) and (min-height:1024px)   {
+
+    .thumbTitle{
+        font-size: 2.2rem;
+        padding-top: 5%;
     }
 
-    .footer-bottom{
-        padding-left: 200px;
+    .title-destaque{
+        font-size: calc(1.45rem + .3vw);
     }
+
+    .descrition-body{
+        font-size: 1.2rem;
+        line-height: 1.2rem;
+        color: rgb(209, 202, 202);
+        text-align:left;
+    }
+
+    .descrition-title{
+        line-height: 0.1rem;
+        font-size: 1rem;
+        text-align: left;
+    }
+
+    .carousel-inner{
+        padding-top: 55px;
+        padding-bottom: 50px;
+        height: 45rem;
+        background-color: rgb(51, 50, 50);
+    }
+
+    .carousel-inner-esportes{
+        padding-top: 55px;
+        padding-bottom: 50px;
+        height: 48rem;
+        background-color: rgb(51, 50, 50);
+    }
+
+    iframe{
+        width: 630px;
+        height: 315px;
+    }
+
+    .carousel-controls1 .carousel-control-right{
+        padding-bottom: 40rem;
+    }
+
+    .carousel-controls2 .carousel-control-right{
+        padding-bottom: 102rem;
+    }
+
+    .swiper-slide{
+        top: 1rem;
+        margin-left: 7rem;
+    }
+
+    img{
+        width: 25rem;
+    }
+
+    .logo{
+        margin-left: 200px;
+    }
+    
+}
+
+
+/* IPAD AIR - MIN 830 */
+
+
+@media (min-width:820px) and (min-height:1180px)   {
+
+    .thumbTitle{
+        font-size: 2.2rem;
+    }
+
+    .carousel-inner{
+        padding-top: 55px;
+        padding-bottom: 50px;
+        height: 45rem;
+        background-color: rgb(51, 50, 50);
+    }
+
+    .carousel-inner-esportes{
+        padding-top: 55px;
+        padding-bottom: 50px;
+        height: 48rem;
+        background-color: rgb(51, 50, 50);
+    }
+
+    iframe{
+        width: 330px;
+        height: 215px;
+    }
+
+    .carousel-controls1 .carousel-control-right{
+        padding-bottom: 58rem;
+    }
+
+    .carousel-controls2 .carousel-control-right{
+        padding-bottom: 135rem !important;
+    }
+
+    .swiper-slide{
+        top: 1rem;
+        margin-left: 7rem !important;
+    }
+
+    img{
+        width: 25rem;
+    }
+
+    .logo{
+        margin-left: 200px;
+    }
+    
+}
+
+/* SURFACE PRO 7 - MIN 915 */
+
+
+@media (min-width:912px) and (min-height:1368px)   {
+
+    .thumbTitle{
+        font-size: 2.2rem;
+    }
+
+    .carousel-inner{
+        padding-top: 55px;
+        padding-bottom: 50px;
+        height: 45rem;
+        background-color: rgb(51, 50, 50);
+    }
+
+    .carousel-inner-esportes{
+        padding-top: 55px;
+        padding-bottom: 50px;
+        height: 48rem;
+        background-color: rgb(51, 50, 50);
+    }
+
+    iframe{
+        width: 400px;
+        height: 215px;
+    }
+
+    .carousel-controls1 .carousel-control-right{
+        padding-bottom: 78rem !important;
+    }
+
+    .carousel-controls2 .carousel-control-right{
+        padding-bottom: 182rem !important;
+    }
+
+    .swiper-slide{
+        top: 1rem;
+        margin-left: 8rem !important;
+    }
+
+    img{
+        width: 30rem;
+    }
+
+    .logo{
+        margin-left: 200px;
+    }
+    
+}
+
+/*IPHONE 11 */
+
+@media (min-width:828px) and (min-height:1792px)   {
+
+    .thumbTitle{
+        font-size: 2.2rem;
+    }
+
+    .carousel-inner{
+        padding-top: 55px;
+        padding-bottom: 50px;
+        height: 45rem;
+        background-color: rgb(51, 50, 50);
+    }
+
+    .carousel-inner-esportes{
+        padding-top: 55px;
+        padding-bottom: 50px;
+        height: 48rem;
+        background-color: rgb(51, 50, 50);
+    }
+
+    iframe{
+        width: 400px;
+        height: 215px;
+    }
+
+    .carousel-controls1 .carousel-control-right{
+        padding-bottom: 135rem;
+    }
+
+    .carousel-controls2 .carousel-control-right{
+        padding-bottom: 295rem;
+    }
+
+    .swiper-slide{
+        top: 1rem;
+        margin-left: 8rem;
+    }
+
+    img{
+        width: 27em;
+    }
+
+    .logo{
+        margin-left: 200px;
+    }
+    
+}
+
+/* NEXT HUB */
+
+@media (min-width:1024px) and (min-height:600px)   {
+
+    .title-destaque{
+        font-size: calc(1.45rem + .3vw);
+    }
+
+    .thumbTitle{
+        padding-top: 5%;
+    }
+
+    .descrition-body{
+        font-size: 1.2rem;
+        line-height: 1.2rem;
+        color: rgb(209, 202, 202);
+        text-align:left;
+    }
+
+    .descrition-title{
+        line-height: 0.1rem;
+        font-size: 1.2rem;
+        text-align: left;
+    }
+
+    .thumbTitle{
+        font-size: 2.2rem;
+    }
+
+    .carousel-inner{
+        padding-top: 55px;
+        padding-bottom: 50px;
+        height: 42rem;
+        background-color: rgb(51, 50, 50);
+    }
+
+    .carousel-inner-esportes{
+        padding-top: 55px;
+        padding-bottom: 50px;
+        height: 48rem;
+        background-color: rgb(51, 50, 50);
+    }
+
+    iframe{
+        width: 420px;
+        height: 215px;
+    }
+
+    .carousel-controls1 .carousel-control-right{
+        padding-top: 40rem;
+    }
+
+    .carousel-controls1 .carousel-control-left{
+        padding-top: 40rem;
+    }
+
+    .carousel-controls2 .carousel-control-right{
+        padding-top:90rem;
+    }
+
+    .carousel-controls2 .carousel-control-left{
+        padding-top: 90rem;
+    }
+
+    .swiper-slide{
+        top: 1rem;
+        margin-left: 5rem;
+    }
+
+    img{
+        width: 30em;
+    }
+
+    .logo{
+        margin-left: 100px;
+    }
+    
+}
+
+/* NEXT HUB MAX*/
+
+@media (min-width:1280px) and (min-height:800px)   {
+
+    .title-destaque{
+        font-size: calc(1.45rem + .3vw);
+    }
+
+    .descrition-body{
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+        color: rgb(209, 202, 202);
+        text-align:left;
+    }
+
+    .descrition-title{
+        line-height: 0.1rem;
+        font-size: 1.2rem;
+        text-align: left;
+    }
+
+    .thumbTitle{
+        font-size: 2.2rem;
+    }
+
+    .carousel-inner{
+        padding-top: 55px;
+        padding-bottom: 50px;
+        height: 42rem;
+        background-color: rgb(51, 50, 50);
+    }
+
+    .carousel-inner-esportes{
+        padding-top: 55px;
+        padding-bottom: 50px;
+        height: 48rem;
+        background-color: rgb(51, 50, 50);
+    }
+
+    iframe{
+        width: 520px;
+        height: 250px;
+    }
+
+    .carousel-controls1 .carousel-control-right{
+        padding-top: 15rem;
+    }
+
+    .carousel-controls1 .carousel-control-left{
+        padding-top: 15rem;
+    }
+
+    .carousel-controls2 .carousel-control-right{
+        padding-bottom:130rem;
+    }
+
+    .carousel-controls2 .carousel-control-left{
+        padding-bottom: 130rem;
+    }
+
+    .swiper-slide{
+        top: 1rem;
+        margin-left: 8rem;
+    }
+
+    img{
+        width: 30em;
+    }
+
+    .logo{
+        margin-left: 100px;
+    }
+    
+}
+
+
+/* WINDOWS */
+
+@media (min-width:1366px) and (min-height:625px)   {
+
+    
+    .title-destaque{
+        font-size: calc(1.45rem + .3vw);
+    }
+
+    .descrition-body{
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+        color: rgb(209, 202, 202);
+        text-align:left;
+    }
+
+    .descrition-title{
+        line-height: 0.1rem;
+        font-size: 1.2rem;
+        text-align: left;
+    }
+
+    .thumbTitle{
+        font-size: 2rem;
+    }
+
+    .carousel-inner{
+        padding-top: 55px;
+        padding-bottom: 50px;
+        height: 42rem;
+        background-color: rgb(51, 50, 50);
+    }
+
+    .carousel-inner-esportes{
+        padding-top: 55px;
+        padding-bottom: 50px;
+        height: 48rem;
+        background-color: rgb(51, 50, 50);
+    }
+
+    iframe{
+        width: 520px;
+        height: 250px;
+    }
+
+    .carousel-controls1 .carousel-control-right{
+        padding-top: 35rem;
+    }
+
+    .carousel-controls1 .carousel-control-left{
+        padding-top: 35rem;
+    }
+
+    .carousel-controls2 .carousel-control-right{
+        padding-bottom:80rem;
+    }
+
+    .carousel-controls2 .carousel-control-left{
+        padding-bottom:80rem;
+    }
+
+    .swiper-slide{
+        top: 1rem;
+        margin-left:7rem;
+    }
+
+    img{
+        width: 30rem;
+    }
+
+    .logo{
+        margin-left: 100px;
+    }
+    
 }
