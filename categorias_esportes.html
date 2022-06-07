@@ -27,34 +27,36 @@
 </head>
 
 <body class="body">
-
-    <header class="cabecalho"> 
+    
+      <header class="cabecalho"> 
 
         <!-- Nav do Menu-->
         
         <a href="home.html"><img id= "logo" src="Recursos/logo.png" alt="JC Play"></img></a>
         <div id="live">
-        <span href="" id="liveTxt"> <img src="https://api.iconify.design/bi/record-fill.svg?color=%23ec5151" class="icon" id="liveCam"/>Ao vivo</span>
+        <span><img src="https://api.iconify.design/bi/record-fill.svg?color=%23ec5151" class="icon" id="liveCam"/><img src="Recursos/ao vivo sem bola.png" alt="ao vivo" id="liveTxt"></span>
         </div>
-        <input type="search" id="buscar" placeholder="   Pesquisar..."/>
+        <img src="https://api.iconify.design/clarity/search-line.svg?color=white" id="buscar" onclick="pesquisar()"/>
+        <div id="campoPesquisa"></div>
         <input type="checkbox" id="menuH" onclick="fade()">
         <label for="menuH"><img class="icon" src="https://api.iconify.design/clarity/menu-line.svg?color=white"></label>
           <nav>
            <ul id="menu"><br>
-            <li><a href="#">Home</a></li><hr>
+            <li><a href="home.html">Home</a></li><hr>
             <li><a href="#">Ao vivo</a></li><hr>
             <li><a href="#">Cultura</a></li>
             <li><a href="categorias_esportes.html">Esportes</a></li>
             <li><a href="#">Política</a></li>
-            <li><a href="#">Saúde e Bem-estar</a></li>
+            <li><a href="#">Saúde</a></li>
             <li><a href="#">Música</a></li>
            </ul>
           </nav>
 
     </header>
 
-    <main>
 
+    <main>
+        <span id="fade"></span>
         <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
 
             <div class="carousel-indicators">
