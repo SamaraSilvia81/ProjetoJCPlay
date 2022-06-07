@@ -606,39 +606,11 @@ p{
 
 
 @media(max-width:800px){
-
-    .cabecalho{
-        padding-right: 655px;
-    }
-    
     #container:hover{
        -webkit-transform:scale(1.1);
        transform: scale(1.1);
        cursor: pointer;
     }
-
-    #buscar{    
-        background: url("https://api.iconify.design/clarity/search-line.svg?color=white") scroll no-repeat right;
-        background-size: 25px;
-        border: 0;
-        width: 30px;
-        color: var(--cor2);
-        transition: all 0.1s linear;
-        margin-top: 10px;
-        font-size: large;
-        height: 30px;
-    }
-    
-    #buscar:focus{
-        position: absolute;
-        left: 15%;
-        background-color: var(--cor1);
-        margin-top: 17px;
-        width: 15%;
-        border: 1px;
-        text-align: center;
-    }
-        
 
     /* DESTAQUES  */
 
@@ -654,9 +626,7 @@ p{
         padding-right: 50px;
     }
 
-    #share{
-        visibility: visible;
-    }
+}
 
 
     /*Carousel body */
