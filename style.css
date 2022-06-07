@@ -82,7 +82,7 @@ input[type="checkbox"]{
 
 input[type="checkbox"]:checked ~ nav{
     display: flex;
-    margin-left: 65%;
+    margin-left: 70%;
 }
 
 label{
