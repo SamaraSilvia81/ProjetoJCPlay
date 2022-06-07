@@ -59,21 +59,21 @@ function expandir() {
 }
 
 // 2. This code loads the IFrame Player API code asynchronously.
-let tag = document.createElement('script');
+var tag = document.createElement('script');
   
 tag.src = "https://www.youtube.com/iframe_api";
-let firstScriptTag = document.getElementsByTagName('script')[0];
+var firstScriptTag = document.getElementsByTagName('script')[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
 // 3. This function creates an <iframe> (and YouTube player)
 //    after the API code downloads.
 
-let player;
+var player;
 function onYouTubeIframeAPIReady() {
   player = new YT.Player('player', {
     height: '760',
     width: '500',
-    videoId: 'Jq8NCVCWP9c',
+    videoId: 'Anie-yxGYwU',
     events: {
       'onStateChange': onPlayerStateChange
     }
@@ -82,7 +82,7 @@ function onYouTubeIframeAPIReady() {
   player2 = new YT.Player('player2', {
     height: '760',
     width: '500',
-    videoId: 'f5ZRHofX5IM',
+    videoId: 'ujwzAH2KVoM',
     events: {
       'onStateChange': onPlayerStateChange2
     }
@@ -91,7 +91,7 @@ function onYouTubeIframeAPIReady() {
   player3 = new YT.Player('player3', {
     height: '760',
     width: '500',
-    videoId: 'hAOZozkU8Lc',
+    videoId: 'KFHy_Rcyvw0',
     events: {
       'onStateChange': onPlayerStateChange3
     }
@@ -124,38 +124,102 @@ function onYouTubeIframeAPIReady() {
     }
   });
 
-    player7 = new YT.Player('player7', {
-    height: '300',
-    width: '400',
+  player7 = new YT.Player('player7', {
+    height: '150',
+    width: '230',
     videoId: 'Anie-yxGYwU',
     events: {
-      'onStateChange': onPlayerStateChange7
+      'onStateChange': onPlayerStateChange6
     }
   });
 
   player8 = new YT.Player('player8', {
-    height: '300',
-    width: '400',
-    videoId: 'ZPrCjO8OPxk',
+    height: '150',
+    width: '230',
+    videoId: 'IdLNQv9DmQE',
     events: {
-      'onStateChange': onPlayerStateChange8
+      'onStateChange': onPlayerStateChange6
     }
   });
 
   player9 = new YT.Player('player9', {
-    height: '300',
-    width: '400',
-    videoId: 'ZPrCjO8OPxk',
+    height: '150',
+    width: '230',
+    videoId: 'YVmQUBBqXvs',
     events: {
-      'onStateChange': onPlayerStateChange2
+      'onStateChange': onPlayerStateChange6
     }
-  })
+  });
+
+  player10 = new YT.Player('player10', {
+    height: '150',
+    width: '230',
+    videoId: 'RNEQHcp-Q68',
+    events: {
+      'onStateChange': onPlayerStateChange6
+    }
+  });
+
+   player11 = new YT.Player('player11', {
+    height: '150',
+    width: '230',
+    videoId: 'ZxZfHIypeTg',
+    events: {
+      'onStateChange': onPlayerStateChange6
+    }
+  });
+
+  player12 = new YT.Player('player12', {
+    height: '150',
+    width: '230',
+    videoId: '8iMOl4O2CGs',
+    events: {
+      'onStateChange': onPlayerStateChange6
+    }
+  });
+
+   player13 = new YT.Player('player13', {
+    height: '150',
+    width: '230',
+    videoId: '2MseOMSjrcM',
+    events: {
+      'onStateChange': onPlayerStateChange6
+    }
+  });
+
+  player14 = new YT.Player('player14', {
+    height: '150',
+    width: '230',
+    videoId: 'EYY-PMQ-kzg',
+    events: {
+      'onStateChange': onPlayerStateChange6
+    }
+  });
+
+   player15 = new YT.Player('player15', {
+    height: '150',
+    width: '230',
+    videoId: 'iCA4SSEw2Kk',
+    events: {
+      'onStateChange': onPlayerStateChange6
+    }
+  });
+
+  player16 = new YT.Player('player16', {
+    height: '150',
+    width: '230',
+    videoId: 'zheafVnFq_s',
+    events: {
+      'onStateChange': onPlayerStateChange6
+    }
+  });
+
 }
 
 // 5. The API calls this function when the player's state changes.
 //    The function indicates that when playing a video (state=1),
 //    the player should play for six seconds and then stop.
-let done = false;
+var done = false;
 function onPlayerStateChange(event) {
   if (event.data == YT.PlayerState.PLAYING && !done) {
     setTimeout(stopVideo, 10000);
@@ -166,6 +230,7 @@ function onPlayerStateChange(event) {
 // 5. The API calls this function when the player's state changes.
 //    The function indicates that when playing a video (state=1),
 //    the player should play for six seconds and then stop.
+var done = false;
 function onPlayerStateChange2(event) {
   if (event.data == YT.PlayerState.PLAYING && !done) {
     setTimeout(stopVideo, 6000);
@@ -176,7 +241,7 @@ function onPlayerStateChange2(event) {
 // 5. The API calls this function when the player's state changes.
 //    The function indicates that when playing a video (state=1),
 //    the player should play for six seconds and then stop.
-
+var done = false;
 function onPlayerStateChange3(event) {
   if (event.data == YT.PlayerState.PLAYING && !done) {
     setTimeout(stopVideo, 6000);
@@ -184,7 +249,7 @@ function onPlayerStateChange3(event) {
   }
 }
 
-
+var done = false;
 function onPlayerStateChange4(event) {
   if (event.data == YT.PlayerState.PLAYING && !done) {
     setTimeout(stopVideo, 6000);
@@ -192,7 +257,7 @@ function onPlayerStateChange4(event) {
   }
 }
 
-
+var done = false;
 function onPlayerStateChange5(event) {
   if (event.data == YT.PlayerState.PLAYING && !done) {
     setTimeout(stopVideo, 6000);
@@ -200,7 +265,7 @@ function onPlayerStateChange5(event) {
   }
 }
 
-
+var done = false;
 function onPlayerStateChange6(event) {
   if (event.data == YT.PlayerState.PLAYING && !done) {
     setTimeout(stopVideo, 6000);
@@ -208,36 +273,10 @@ function onPlayerStateChange6(event) {
   }
 }
 
-function onPlayerStateChange7(event) {
-  if (event.data == YT.PlayerState.PLAYING && !done) {
-    setTimeout(stopVideo, 1000);
-    done = true;
-  }
-}
-
-function onPlayerStateChange8(event) {
-  if (event.data == YT.PlayerState.PLAYING && !done) {
-    setTimeout(stopVideo, 2000);
-    done = true;
-  }
-}
-
-
-
 
 const sectionsWithCarousel = document.querySelectorAll(
   ".section-with-carousel"
 );
-
-createOffsets();
-window.addEventListener("resize", createOffsets);
-
-function createOffsets() {
- 
-  const offset = (window.innerWidth - 1200)/2;
-  const mqLarge = window.matchMedia("(min-width: 1200px)");
-
-}
 
 for (const section of sectionsWithCarousel) {
   let slidesPerView = [1.5, 2.5, 3.5];
@@ -267,3 +306,4 @@ for (const section of sectionsWithCarousel) {
     }
   });
 }
+
