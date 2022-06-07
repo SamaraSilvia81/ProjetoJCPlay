@@ -46,6 +46,18 @@ function pesquisar(){
   pesquisa.style.display = "none";
 }
 }
+
+function expandir() {
+  let checkBox = document.getElementById("expandir");
+  let div = document.getElementById("video-desc");
+
+  if (checkBox.checked == true){
+    div.style.display = "block";
+  } else {
+    div.style.display = "none";
+  }
+}
+
 // 2. This code loads the IFrame Player API code asynchronously.
 let tag = document.createElement('script');
   
