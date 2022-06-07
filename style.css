@@ -112,9 +112,8 @@ nav{
     margin-top: 10px;
 }
 #liveTxt{
-    width: 80%;
-    color: var(--cor5);
-    font-weight: 600;
+    width: 80px;
+    height: auto;
 
 }
 #liveCam{
