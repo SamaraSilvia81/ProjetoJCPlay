@@ -54,76 +54,94 @@
 
 
     <main>
-
-        <div class="videos_escolhido">
-            <div class="escolhido">
-
-                <p>Nome da Categoria</p>
+        <span id="fade"></span>
+        
+                <h4>ESPORTES</h4>
                 
                 <div class="vescolhido">
-                    <img src="#" alt="teste1" id="video-escolhido1"> <!-- deixei o src para testes, mas acredito que na utilização da API indicariamos o id para substituição-->
+                  <div id="player5"></div>
+                  <input type="checkbox" id="expandir" onclick="expandir()" >
+                  <label id="head-expandir" for="expandir"><h4>TITE manda recado para quem cobra HULK e RAPHAEL VEIGA na SELEÇÃO BRASILEIRA</h4>
+                    <i id="seta-exp"class="bi bi-caret-down"></i>
+                  </label>
+                  <div id="video-desc"><p class="descrition-title">2 dias, 2022</p>
+                  <p class="descrition-body">O técnico Tite tem uma daquelas profissões em que a unanimidade é considerada um luxo quase inexistente. 😅 Raras são às vezes em que o treinador convoca a seleção brasileira e não há críticas. 🗣️ Sempre há quem queira um jogador A ou B na seleção.</p>
                 </div>
-
-                <p>Aqui está a descrição do video</p>
-
-                Expandir Descrição <label for="menuH"><img class="icon" src="Recursos/seta_baixo.jpg"></label><br>
-                Compartilhar <label for="menuH"><img class="icon" src="Recursos/seta_compartilhar.jpg"></label>
-
+              </div>
             </div>
         </div>
         
-
-        <div class="videos_Recentes" style="margin-top: 70px;" >
-
-            <h4>Relacionados</h4>
-            <ul class="videos_lista"> <!-- o ul é a lista e cada li representa um video-->
-                <li class="video">
-                    <img class="thumbnail" src=""/>
-                    <div class="video_info">
-                        <a href="" class="play_video">
-                        <span class="btn__play"></span> <!-- utilizei span pois vai ocupar o espaço apenas o conteudo, no caso do span que está dentro da ancora, ele seria um botão adicionado por bootstrap-->
-                        </a>
-                        <span class="titulo">Titulo</span>
+        <section class="section-with-carousel">
+          <a class="link_categoria" href="categorias.html"><h2 class="thumbTitle">Relacionados</h2></a>
+           <div class="carousel-wrapper">
+             <div class="swiper">
+               <div class="swiper-wrapper">
+                 <div class="swiper-slide">
+                   <div class="container-10">
+                     <div class="row row-cols-auto">
+                       <div class="embed-responsive embed-responsive-16by9">
+                         <figure id="containerEsportes">
+                           <iframe class="embed-responsive-item" width="400" height="315" src="https://www.youtube.com/watch?v=Anie-yxGYwU&t=3s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                           <figcaption class="timeEsportes">00:30</figcaption>
+                         </figure>
+                       </div>
+                       <div class="embed-responsive embed-responsive-16by9">
+                         <figure id="containerEsportes">
+                           <iframe class="embed-responsive-item" width="400" height="315" src="https://www.youtube.com/watch?v=PoUpea6fSUQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                           <figcaption class="timeEsportes">00:30</figcaption>
+                         </figure>
+                       </div>
+                       <div class="embed-responsive embed-responsive-16by9">
+                         <iframe class="embed-responsive-item" width="400" height="315" src="https://www.youtube.com/watch?v=6GzCyhKOzKM&t=3s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                       </div>
+                       <div class="embed-responsive embed-responsive-16by9">
+                         <iframe class="embed-responsive-item" width="400" height="315" src="https://www.youtube.com/watch?v=xKhdUwUHyTE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                       </div>
+                     </div>
+                   </div>
+                 </div>
+                 <div class="swiper-slide">
+                  <div class="container-10">
+                    <div class="row row-cols-auto">
+                      <div class="embed-responsive embed-responsive-16by9">
+                        <figure id="containerEsportes">
+                          <iframe class="embed-responsive-item" width="400" height="315" src="https://www.youtube.com/watch?v=Anie-yxGYwU&t=3s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                          <figcaption class="timeEsportes">00:30</figcaption>
+                        </figure>
+                      </div>
+                      <div class="embed-responsive embed-responsive-16by9">
+                        <figure id="containerEsportes">
+                          <iframe class="embed-responsive-item" width="400" height="315" src="https://www.youtube.com/watch?v=PoUpea6fSUQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                          <figcaption class="timeEsportes">00:30</figcaption>
+                        </figure>
+                      </div>
+                      <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" width="400" height="315" src="https://www.youtube.com/watch?v=6GzCyhKOzKM&t=3s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                      </div>
+                      <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" width="400" height="315" src="https://www.youtube.com/watch?v=xKhdUwUHyTE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                      </div>
                     </div>
-                </li>
-                <li class="video">
-                    <img class="thumbnail" src=""/>
-                    <div class="video_info">
-                        <a href="" class="play_video">
-                        <span class="btn__play"></span>
-                        </a>
-                        <span class="titulo">Titulo</span>
-                    </div>
-                </li>
-
-            <div class="anuncio">
-                <strong> ANÚNCIOS </strong>
-            <!-- os anuncios são puxados pelo JS, então apenas reservei umaa div para inseri-los e ajustar os tamanhos com css-->
+                  </div>
+              </div>
             </div>
-    
-                <li class="video">
-                    <img class="thumbnail" src=""/>
-                    <div class="video_info">
-                        <a href="" class="play_video">
-                        <span class="btn__play"></span>
-                        </a>
-                        <span class="titulo">Titulo</span>
-                    </div>
-                </li>
-                <li class="video">
-                    <img class="thumbnail" src=""/>
-                    <div class="video_info">
-                        <a href="" class="play_video">
-                        <span class="btn__play"></span>
-                        </a>
-                        <span class="titulo">Titulo</span>
-                    </div>
-                </li>
-            </ul>
-        </div>
+          </div>
+          <div class="carousel-controls1">
+            <div class="carousel-control carousel-control-left">
+              <i class="bi bi-caret-left-fill"></i>
+              </div>
+              <div class="carousel-control carousel-control-right">
+                <i class="bi bi-caret-right-fill"></i>
+              </div>
+          </div>
+        </section>
 
-    </main>
 
+         <section id="advertising">
+          <i class="bi bi-badge-ad" id="ad"></i>
+         </section>
+
+<br><br><br>
 
     <footer>
                   <div class="container5">
