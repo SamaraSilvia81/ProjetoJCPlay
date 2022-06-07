@@ -199,6 +199,47 @@ main{
     overflow-x:hidden;
 }
 
+
+/*video*/
+.vescolhido{
+    background-color: rgba(0, 0, 0, 0.88);
+    color: white;
+}
+.vescolhido #player5{
+    height: 320px;
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+}
+#head-expandir{
+    margin-left: 15px;
+    display: inline-flex;
+}
+#seta-exp{
+    padding: 10px;
+    font-size:10px;
+    padding-left: 10px;
+    padding-top: 10px;
+    font-size:18px;
+}
+#video-desc{
+    display: none;
+    font-size: 15rem;
+    padding:  10px 20px;
+}
+#advertising{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    height: 300px;
+    width: 250px;
+    background-color: rgb(163, 183, 201);
+}
+#ad{
+    float: right;
+    font-size: 30px;
+}
+
 /* DESTAQUES HOME E ESPORTES */
 
 #title-carousel{
