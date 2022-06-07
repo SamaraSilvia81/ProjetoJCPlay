@@ -672,24 +672,10 @@ p{
 
 @media (max-width: 999px){
 
-    .cabecalho{
-        padding-right: 125px;
-    }
-    
     #container:hover{
        -webkit-transform:scale(1.1);
        transform: scale(1.1);
        cursor: pointer;
-    }
-    
-    #buscar:focus{
-        position: absolute;
-        left: 55%;
-        background-color: var(--cor1);
-        margin-top: 17px;
-        width: 25%;
-        border: 1px;
-        text-align: center;
     }
 
     .carousel-item{
@@ -705,13 +691,6 @@ p{
         line-height: 50px; /* Faz ficar no centro */
         background-color: #fff;
         padding-left: 50px;
-    }
-
-    #share{
-        color: white;
-        padding-left: 400px;
-        font-size: 26px;
-        visibility:visible;
     }
 
     .carousel-caption{
