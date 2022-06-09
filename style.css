@@ -29,7 +29,7 @@
     z-index: 80;
   }
 
-.cabecalho{
+header{
     background-color: var(--cor1);
     position: fixed;
     width: 100%;
