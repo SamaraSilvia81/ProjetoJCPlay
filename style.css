@@ -215,6 +215,11 @@ main{
     margin-left: 15px;
     display: inline-flex;
 }
+
+.titleVideoEscolhido{
+    padding-left: 1.5rem;
+    padding-bottom: 1rem;
+}
 #seta-exp{
     padding: 10px;
     font-size:10px;
@@ -227,37 +232,40 @@ main{
     font-size: 15rem;
     padding:  10px 20px;
 }
-#advertising{
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    height: 300px;
-    width: 250px;
-    background-color: rgb(163, 183, 201);
-}
-#ad{
-    float: right;
-    font-size: 30px;
+#ads{
+    padding-top: 4rem;
+    padding-bottom: 3rem;
+    font-size: 15px;
 }
 
 /* DESTAQUES HOME E ESPORTES */
 
 #title-carousel{
     color: white;
-    padding-left: 20px;
+    padding-left:40px;
     padding-top: 20px;
-    text-transform: uppercase;
+    font-size: 28px;
+}
+
+#subtitle-carousel{
+    line-height: 0.2rem;
+    font-size: 1.2rem;
+    text-align: left;
+    padding-left: 40px;
+    padding-bottom: 1rem;
+    color: rgb(185, 175, 175);
 }
 
 .title-destaque{
-    font-size: calc(1.275rem + .3vw);
+    font-size: calc(1.2rem);
+    text-align: justify;
 }
 
 .descrition-body{
     font-size: 0.90625rem;
     line-height: 1.2rem;
     color: rgb(209, 202, 202);
-    text-align:left;
+    text-align:justify;
 }
 
 .descrition-title{
@@ -335,15 +343,19 @@ main{
 figcaption{
     top: 15rem;
     left: 22rem;
-    font-size: 20px;
+    font-size: 17px;
 }
 
 .description-home{
-    font-size: 20px;
+    font-size: 18px;
     width: 230px;
-    font-weight: 500;
+    font-weight: 650;
     line-height: 1.5rem;
     text-align: justify;
+}
+
+#nextPage{
+    font-size: 27px;
 }
 
 .swiper-slide{
@@ -358,8 +370,8 @@ img{
 }
 
 #container:hover{
-    -webkit-transform:scale(1.1);
-    transform: scale(1.1);
+    -webkit-transform:scale(1.2);
+    transform: scale(1.2);
     cursor: pointer;
  }
 
@@ -406,14 +418,32 @@ img{
       display: flex;
       justify-content: space-between;
       padding: 0 12px;
-      z-index: 1;
+      z-index: 13;
+    }
+
+    #adsHome{
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-top: 4rem;
+        padding-bottom: 3rem;
+        font-size: 15px;
     }
 
     
 /* ESPORTES */
 
-.container1{
-    margin-left: 50px;
+
+.container1, .container2{
+    padding-left: 35px;
+}
+
+.title-destaque-esportes{
+    font-size: calc(1.2rem);
+    text-align: justify;
+}
+
+#containerEsportes{
+    padding-right: 2rem;
 }
 
 .container-10{
@@ -421,13 +451,14 @@ img{
   flex-direction: row;
 }
 
-.container2{
-    margin-left: 50px;
+a {
+    text-decoration: none !important;
 }
 
 .timeEsportes{
     top: 15rem;
     left: 22rem;
+    color: rgb(87, 84, 84);
     font-size: 20px;
 }
 
@@ -443,10 +474,18 @@ img{
 }
 
 .display{
-    padding-top: 15px;
-    text-transform: uppercase;
-    font-weight: bolder;
-    font-size: 30px;
+    padding-top: 16px;
+    font-weight: bold;
+    font-size: 28px;
+    color: black;
+}
+
+#adsEsportes{
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 4rem;
+    padding-bottom: 3rem;
+    font-size: 15px;
 }
 
 /* DESTAQUES EXCLUSIVOS DE ESPORTES */
@@ -456,15 +495,6 @@ img{
     padding-bottom: 50px;
     height: 55rem;
     background-color: rgb(51, 50, 50);
-}
-
-#subtitle-carousel{
-    line-height: 0.2rem;
-    font-size: 1rem;
-    text-align: left;
-    padding-left: 20px;
-    padding-bottom: 1rem;
-    color: rgb(185, 175, 175);
 }
 
 .indicador-esportes{
@@ -488,14 +518,13 @@ img{
   }
 
 
-  /* Carossel de Esportes */
 
- 
 /* FOOTER */
 
 footer{
     margin-top: 30px;
 }
+
 #jc_info{
    display: flex;
    text-align: center;  /* Faz ficar no centro */
@@ -535,8 +564,8 @@ footer{
 }
 
 .container5{
-    padding-top: 3%;;
-    background: rgb(51, 50, 50);;
+    padding-top: 3%;
+    background: rgb(51, 50, 50);
     color: #fff;
     font-size: 12px;
 }
@@ -608,6 +637,18 @@ h4{
     .logo{
         margin-left: 150px;
     }
+
+    iframe{
+        width: 290px;
+    }
+
+    #title-carousel, #subtitle-carousel{
+        padding-left:40px;
+    }
+
+    #ads{
+        padding-left:1.5rem;
+    }
     
 }
 
@@ -634,6 +675,32 @@ h4{
         margin-left: 1rem;
     }
 
+    iframe{
+        width: 300px;
+    }
+
+    #containerEsportes{
+        padding-right: 1.5rem;
+    }
+
+    #title-carousel, #subtitle-carousel{
+        padding-left:60px;
+    }
+
+    #player, #player2, #player3, #player4, #player5, #player6{
+        width: 350px;
+        height: 340px;
+        padding-left: 2rem;
+    }
+
+    #subtitle-carousel, #title-carousel{ 
+        padding-left: 2rem;
+    }
+
+    #ads{
+        padding-left:1.5rem;
+    }
+
     
 }
 
@@ -651,6 +718,28 @@ h4{
     
     .carousel-controls2 .carousel-control-right{
         padding-bottom: 62rem;
+    }
+
+    .description-esportes{
+        text-align: left;
+    }
+
+    iframe{
+        width: 320px;
+    }
+
+    #player, #player2, #player3, #player4, #player5, #player6{
+        width: 360px;
+        height: 340px;
+        padding-left: 2rem;
+    }
+
+    #subtitle-carousel, #title-carousel{ 
+        padding-left: 2rem;
+    }
+
+    #ads{
+        padding-left:1.5rem;
     }
     
 }
@@ -676,6 +765,20 @@ h4{
         padding-left: 0.5rem;
         margin-left: 1rem;
     }
+
+    iframe{
+        width: 350px;
+    }
+
+    #player, #player2, #player3, #player4, #player5, #player6{
+        width: 380px;
+        height: 340px;
+        padding-left: 2rem;
+    }
+
+    #subtitle-carousel, #title-carousel{ 
+        padding-left: 2rem;
+    }
 }
 
 /*IPHONE XR - 414 */
@@ -692,6 +795,20 @@ h4{
     
     .carousel-controls2 .carousel-control-right{
         padding-bottom: 75rem;
+    }
+
+    iframe{
+        width: 340px;
+    }
+
+    #player, #player2, #player3, #player4, #player5, #player6{
+        width: 380px;
+        height: 340px;
+        padding-left: 3rem;
+    }
+
+    #subtitle-carousel, #title-carousel{ 
+        padding-left: 3rem;
     }
 }
 
@@ -714,7 +831,7 @@ h4{
     }
 
     iframe{
-        width: 400px;
+        width: 470px;
         height: 315px;
     }
 
@@ -727,7 +844,7 @@ h4{
     }
 
     .carousel-controls2 .carousel-control-right{
-        padding-bottom: 22rem;
+        padding-bottom: 1rem ;
     }
 
     .swiper-slide{
@@ -742,7 +859,16 @@ h4{
     .logo{
         margin-left: 200px;
     }
-    
+ 
+    #player, #player2, #player3, #player4, #player5, #player6{
+        width: 510px;
+        height: 340px;
+        padding-left: 2rem;
+    }
+
+    #subtitle-carousel, #title-carousel{ 
+        padding-left: 2rem;
+    }
 }
 
 /* IPAD MINI - MIN 770 */
@@ -795,7 +921,7 @@ h4{
     }
 
     .carousel-controls2 .carousel-control-right{
-        padding-bottom: 102rem;
+        padding-bottom: 80rem;
     }
 
     .swiper-slide{
@@ -809,6 +935,28 @@ h4{
 
     .logo{
         margin-left: 200px;
+    }
+
+    #containerEsportes, .display{
+        padding-left: 2rem;
+    }
+
+    #title-carousel, #subtitle-carousel{
+        padding-left:60px;
+    }
+
+    #player, #player2, #player3, #player4, #player5, #player6{
+        width: 700px;
+        height: 340px;
+        padding-left: 6rem;
+    }
+
+    #subtitle-carousel, #title-carousel{ 
+        padding-left: 6rem;
+    }
+
+    #ads{
+        padding-left:8rem;
     }
     
 }
@@ -836,18 +984,26 @@ h4{
         height: 48rem;
         background-color: rgb(51, 50, 50);
     }
+   
+    .display{
+        padding-right: 2rem;
+    }
+
+    #title-carousel, #subtitle-carousel{
+        padding-left:60px;
+    }
 
     iframe{
-        width: 330px;
-        height: 215px;
+        width: 300px;
+        height: 315px;
     }
 
     .carousel-controls1 .carousel-control-right{
-        padding-bottom: 58rem;
+        padding-bottom: 60rem;
     }
 
     .carousel-controls2 .carousel-control-right{
-        padding-bottom: 135rem !important;
+        padding-bottom: 140rem !important;
     }
 
     .swiper-slide{
@@ -861,8 +1017,21 @@ h4{
 
     .logo{
         margin-left: 200px;
+    }    
+
+    #player, #player2, #player3, #player4, #player5, #player6{
+        width: 750px;
+        height: 340px;
+        padding-left: 6rem;
     }
-    
+
+    #subtitle-carousel, #title-carousel{ 
+        padding-left: 6rem;
+    }
+
+    #ads{
+        padding-left:8rem;
+    }
 }
 
 /* SURFACE PRO 7 - MIN 915 */
@@ -889,16 +1058,16 @@ h4{
     }
 
     iframe{
-        width: 400px;
-        height: 215px;
+        width: 700px;
+        height: 315px;
     }
 
     .carousel-controls1 .carousel-control-right{
-        padding-bottom: 78rem !important;
+        padding-bottom: 80rem;
     }
 
     .carousel-controls2 .carousel-control-right{
-        padding-bottom: 182rem !important;
+        padding-bottom: 187rem !important;
     }
 
     .swiper-slide{
@@ -912,6 +1081,16 @@ h4{
 
     .logo{
         margin-left: 200px;
+    }
+
+    #player, #player2, #player3, #player4, #player5, #player6{
+        width: 850px;
+        height: 340px;
+        padding-left: 6rem;
+    }
+
+    #subtitle-carousel, #title-carousel{ 
+        padding-left: 6rem;
     }
     
 }
@@ -1015,19 +1194,19 @@ h4{
     }
 
     .carousel-controls1 .carousel-control-right{
-        padding-top: 40rem;
+        padding-top: 35rem;
     }
 
     .carousel-controls1 .carousel-control-left{
-        padding-top: 40rem;
+        padding-top: 35rem;
     }
 
     .carousel-controls2 .carousel-control-right{
-        padding-top:90rem;
+        padding-top:82rem;
     }
 
     .carousel-controls2 .carousel-control-left{
-        padding-top: 90rem;
+        padding-top: 82rem;
     }
 
     .swiper-slide{
@@ -1041,6 +1220,16 @@ h4{
 
     .logo{
         margin-left: 100px;
+    }
+
+    #player, #player2, #player3, #player4, #player5, #player6{
+        width: 950px;
+        height: 340px;
+        padding-left: 6rem;
+    }
+
+    #subtitle-carousel, #title-carousel{ 
+        padding-left: 6rem;
     }
     
 }
@@ -1107,7 +1296,7 @@ h4{
 
     .swiper-slide{
         top: 1rem;
-        margin-left: 8rem;
+        margin-left: 10rem;
     }
 
     img{
@@ -1117,6 +1306,17 @@ h4{
     .logo{
         margin-left: 100px;
     }
+
+    #player, #player2, #player3, #player4, #player5, #player6{
+        width: 1220px;
+        height: 340px;
+        padding-left: 6rem;
+    }
+
+    #subtitle-carousel, #title-carousel{ 
+        padding-left: 6rem;
+    }
+
     
 }
 
@@ -1125,6 +1325,36 @@ h4{
 
 @media (min-width:1366px) and (min-height:625px)   {
 
+    #player, #player2, #player3, #player4, #player5, #player6{
+        width: 1220px;
+        height: 340px;
+        padding-left: 9rem;
+    }
+
+    .display{
+        padding-left:6rem;
+    }
+
+    .container-1{
+        padding-left:6rem;
+    }
+
+    .container-2{
+        padding-left:6rem;
+    }
+
+    .title-destaque-esportes{
+        font-size: calc(1.5rem);
+        text-align: justify;
+    }
+    
+    #subtitle-carousel{
+        padding-left: 9rem;
+    }
+
+    #title-carousel{
+        padding-left: 9rem;
+    }
     
     .title-destaque{
         font-size: calc(1.45rem + .3vw);
@@ -1184,7 +1414,7 @@ h4{
 
     .swiper-slide{
         top: 1rem;
-        margin-left:7rem;
+        margin-left:10rem;
     }
 
     img{
@@ -1194,5 +1424,30 @@ h4{
     .logo{
         margin-left: 100px;
     }
-    
+
+    #adsHome{
+        padding-left: 27rem;
+        padding-top: 4rem;
+        padding-bottom: 3rem;
+        font-size: 15px;
+    }
+
+    #adsEsportes{
+        padding-left: 27rem;
+        padding-top: 4rem;
+        padding-bottom: 3rem;
+        font-size: 15px;
+    }
+
+    #ads{
+        padding-left: 18rem;
+        padding-top: 4rem;
+        padding-bottom: 3rem;
+        font-size: 15px;
+    }
+
+    .titleVideoEscolhido{
+        padding-left: 7rem;
+        padding-bottom: 1rem;
+    }
 }
