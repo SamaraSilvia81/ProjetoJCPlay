@@ -58,15 +58,15 @@ function expandir() {
   }
 }
 
-// 2. This code loads the IFrame Player API code asynchronously.
+// 1. This code loads the IFrame Player API code asynchronously.
 var tag = document.createElement('script');
   
 tag.src = "https://www.youtube.com/iframe_api";
 var firstScriptTag = document.getElementsByTagName('script')[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-// 3. This function creates an <iframe> (and YouTube player)
-//    after the API code downloads.
+// 2. This function creates an <iframe> (and YouTube player)
+// after the API code downloads.
 
 var player;
 function onYouTubeIframeAPIReady() {
@@ -213,66 +213,7 @@ function onYouTubeIframeAPIReady() {
       'onStateChange': onPlayerStateChange6
     }
   });
-
 }
-
-// 5. The API calls this function when the player's state changes.
-//    The function indicates that when playing a video (state=1),
-//    the player should play for six seconds and then stop.
-var done = false;
-function onPlayerStateChange(event) {
-  if (event.data == YT.PlayerState.PLAYING && !done) {
-    setTimeout(stopVideo, 10000);
-    done = true;
-  }
-}
-
-// 5. The API calls this function when the player's state changes.
-//    The function indicates that when playing a video (state=1),
-//    the player should play for six seconds and then stop.
-var done = false;
-function onPlayerStateChange2(event) {
-  if (event.data == YT.PlayerState.PLAYING && !done) {
-    setTimeout(stopVideo, 6000);
-    done = true;
-  }
-}
-
-// 5. The API calls this function when the player's state changes.
-//    The function indicates that when playing a video (state=1),
-//    the player should play for six seconds and then stop.
-var done = false;
-function onPlayerStateChange3(event) {
-  if (event.data == YT.PlayerState.PLAYING && !done) {
-    setTimeout(stopVideo, 6000);
-    done = true;
-  }
-}
-
-var done = false;
-function onPlayerStateChange4(event) {
-  if (event.data == YT.PlayerState.PLAYING && !done) {
-    setTimeout(stopVideo, 6000);
-    done = true;
-  }
-}
-
-var done = false;
-function onPlayerStateChange5(event) {
-  if (event.data == YT.PlayerState.PLAYING && !done) {
-    setTimeout(stopVideo, 6000);
-    done = true;
-  }
-}
-
-var done = false;
-function onPlayerStateChange6(event) {
-  if (event.data == YT.PlayerState.PLAYING && !done) {
-    setTimeout(stopVideo, 6000);
-    done = true;
-  }
-}
-
 
 const sectionsWithCarousel = document.querySelectorAll(
   ".section-with-carousel"
@@ -283,6 +224,7 @@ for (const section of sectionsWithCarousel) {
   if (section.classList.contains("section-with-left-offset")) {
     slidesPerView = [1.5, 2.5, 3.5];
   }
+  
   const swiper = section.querySelector(".swiper");
   new Swiper(swiper, {
     slidesPerView: slidesPerView[0],
