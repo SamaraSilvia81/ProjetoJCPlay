@@ -1460,9 +1460,11 @@ h4{
         text-align:justify;
     }
     
-    #player5{
-        width: 800px;
-        height: 340px;
-        padding-left: 9rem;
+    vescolhido #player5{
+        height: 320px;
+        width: 90%;
+        padding: 10px;
+        padding-left: 8rem;
+        margin-top: 20px;
     }
 }
